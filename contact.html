@@ -1,0 +1,237 @@
+﻿<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta content="width=device-width, initial-scale=1.0" name="viewport"><meta content="web_standard" name="shell-type"><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"><link href="https://fonts.googleapis.com" rel="preconnect"><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+
+  </style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"inverse-surface":"#30312e","on-primary-fixed-variant":"#454843","on-secondary-fixed-variant":"#444b00","surface":"#faf9f4","tertiary-fixed":"#e1e3da","tertiary":"#000000","on-tertiary-fixed":"#191d17","on-tertiary":"#ffffff","on-secondary":"#ffffff","surface-container-lowest":"#ffffff","surface-dim":"#dbdad5","error":"#ba1a1a","on-tertiary-fixed-variant":"#454841","on-secondary-fixed":"#1a1e00","secondary-fixed":"#ddec5f","primary":"#000000","primary-fixed-dim":"#c5c7c1","error-container":"#ffdad6","on-surface-variant":"#454843","on-surface":"#1b1c19","surface-variant":"#e3e3de","outline-variant":"#c5c7c1","surface-tint":"#5c5f5a","on-error":"#ffffff","inverse-on-surface":"#f2f1ec","tertiary-fixed-dim":"#c5c7be","on-primary":"#ffffff","secondary-container":"#dae95c","surface-container-highest":"#e3e3de","inverse-primary":"#c5c7c1","tertiary-container":"#191d17","on-primary-fixed":"#191c18","on-background":"#1b1c19","secondary-fixed-dim":"#c1d045","surface-container":"#efeee9","surface-container-low":"#f5f4ef","surface-bright":"#faf9f4","outline":"#757872","on-primary-container":"#82857f","primary-container":"#191c18","background":"#faf9f4","on-secondary-container":"#5f6800","on-error-container":"#93000a","secondary":"#5b6400","primary-fixed":"#e1e3dc","surface-container-high":"#e9e8e3","on-tertiary-container":"#82857c"},borderRadius:{DEFAULT:"0.25rem",lg:"0.5rem",xl:"0.75rem",full:"9999px"},spacing:{"gutter":"1.5rem","gutter-mobile":"1rem","margin-mobile":"1.25rem","space-md":"1rem","margin":"3rem","space-lg":"1.75rem","space-sm":"0.5rem","space-xs":"0.25rem","space-xl":"2.5rem"},fontFamily:{"headline-xl-mobile":["Plus Jakarta Sans"],"headline-lg":["Plus Jakarta Sans"],"headline-sm":["Plus Jakarta Sans"],"title-md":["Plus Jakarta Sans"],"headline-xl":["Plus Jakarta Sans"],"body-sm":["Plus Jakarta Sans"],"label-md":["Plus Jakarta Sans"],"display-lg":["Plus Jakarta Sans"],"body-md":["Plus Jakarta Sans"],"display-lg-mobile":["Plus Jakarta Sans"],"body-lg":["Plus Jakarta Sans"],"label-sm":["Plus Jakarta Sans"]},fontSize:{"headline-xl-mobile":["28px",{"lineHeight":"36px","letterSpacing":"-0.015em","fontWeight":"600"}],"headline-lg":["32px",{"lineHeight":"40px","letterSpacing":"-0.02em","fontWeight":"600"}],"headline-sm":["22px",{"lineHeight":"28px","letterSpacing":"-0.01em","fontWeight":"600"}],"title-md":["18px",{"lineHeight":"24px","letterSpacing":"-0.005em","fontWeight":"600"}],"headline-xl":["40px",{"lineHeight":"48px","letterSpacing":"-0.025em","fontWeight":"700"}],"body-sm":["13px",{"lineHeight":"18px","fontWeight":"400"}],"label-md":["13px",{"lineHeight":"16px","letterSpacing":"0.04em","fontWeight":"600"}],"display-lg":["56px",{"lineHeight":"64px","letterSpacing":"-0.03em","fontWeight":"700"}],"body-md":["15px",{"lineHeight":"22px","fontWeight":"400"}],"display-lg-mobile":["36px",{"lineHeight":"44px","letterSpacing":"-0.02em","fontWeight":"700"}],"body-lg":["18px",{"lineHeight":"28px","fontWeight":"400"}],"label-sm":["11px",{"lineHeight":"14px","letterSpacing":"0.08em","fontWeight":"700"}]}}}}</script><script type="module" src="/src/js/global.js"></script>
+<script type="module" src="/src/js/contact.js"></script>
+<style>
+    @layer base {
+      html { scroll-behavior: smooth; }
+      body { margin: 0; padding: 0; overflow-x: hidden; }
+    }
+    ::-webkit-scrollbar { display: none; }
+    .interactive-card {
+      transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .interactive-card:hover {
+      transform: translateY(-6px);
+    }
+    .scroll-reveal {
+      opacity: 0;
+      transform: translateY(28px);
+      transition: opacity 0.75s cubic-bezier(0.16, 1, 0.3, 1), transform 0.75s cubic-bezier(0.16, 1, 0.3, 1);
+      will-change: opacity, transform;
+    }
+    .scroll-reveal.revealed {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    .parallax-bg {
+      will-change: transform;
+      transition: transform 0.1s cubic-bezier(0, 0, 0.2, 1);
+    }
+  </style>
+</head><body class="bg-surface font-body-md text-body-md text-on-surface antialiased"><!-- FLOATING HEADER / NAVBAR -->
+<header class="fixed top-0 inset-x-0 z-50 pt-4 px-4 sm:px-6 lg:px-12 pointer-events-none">
+  <div class="max-w-[1440px] mx-auto">
+    <div class="pointer-events-auto h-20 bg-[#0B0D0C]/90 backdrop-blur-xl border border-white/10 rounded-full px-6 lg:px-8 flex items-center justify-between shadow-[0_16px_36px_rgba(0,0,0,0.35)]">
+      <!-- Logo -->
+      <a class="flex items-center gap-3.5 shrink-0 focus:outline-none group" href="index.html">
+        <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-[#9E1B22] via-[#C52631] to-[#D8E94B] p-0.5 flex items-center justify-center shadow-lg group-hover:scale-105 transition-transform">
+          <div class="w-full h-full bg-[#0B0D0C] rounded-[10px] flex items-center justify-center">
+            <span class="font-extrabold text-sm text-white tracking-tighter">NI</span>
+          </div>
+        </div>
+        <div class="flex flex-col">
+          <span class="font-extrabold text-white tracking-wider text-[15px] leading-none">NARA</span>
+          <span class="text-[#D8E94B] text-[9px] tracking-widest leading-none mt-1 uppercase font-bold">INSTITUTE</span>
+        </div>
+      </a>
+      
+      <!-- Navigation Links -->
+      <nav class="hidden xl:flex items-center gap-8">
+        <a class="text-[13px] font-semibold text-white/70 hover:text-white transition-colors" href="index.html" >Beranda</a>
+        <a class="text-[13px] font-semibold text-white/70 hover:text-white transition-colors" href="solutions.html" >Solusi &amp; Layanan</a>
+        <a class="text-[13px] font-semibold text-white/70 hover:text-white transition-colors" href="about.html" >Tentang Kami</a>
+        <a class="text-[13px] font-semibold text-white/70 hover:text-white transition-colors" href="insights.html" >Pusat Wawasan</a>
+        <a class="text-[13px] font-semibold text-white font-bold border-b-2 border-[#9E1B22] pb-1 transition-colors" href="contact.html" aria-current="page">Kontak &amp; RFQ</a>
+      </nav>
+      
+      <!-- Right CTA / Action -->
+      <div class="flex items-center gap-4">
+        <div class="hidden md:flex flex-col items-end border-r border-white/15 pr-4">
+          <span class="text-white/50 uppercase tracking-wider text-[9px] font-semibold">Hotline Eksekutif</span>
+          <a class="text-[13px] font-bold text-white tracking-tight hover:text-[#D8E94B] transition-colors flex items-center gap-1.5" href="https://wa.me/628111028351" target="_blank">
+            <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+            +62 811-1028-351
+          </a>
+        </div>
+        <a class="h-10 px-5 bg-gradient-to-r from-[#9E1B22] to-[#b8232c] hover:from-[#b8232c] hover:to-[#9E1B22] text-white text-[13px] font-bold rounded-full flex items-center justify-center gap-2 transition-all shadow-lg hover:shadow-red-900/40" href="contact.html">
+          <span>Konsultasi Kemitraan</span>
+          <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+        </a>
+      </div>
+    </div>
+  </div>
+</header><main class="w-full pt-32 sm:pt-36 bg-[#F8F7F2] min-h-screen"><div class="flex flex-col w-full">
+<!-- INSTITUTIONAL HERO BREADCRUMB & METADATA BAR -->
+<section class="scroll-reveal w-full bg-surface pt-6 pb-4">
+<div class="max-w-[1440px] mx-auto px-4 lg:px-6 lg:px-12">
+<div class="flex flex-wrap items-center justify-between gap-3 pb-space-sm">
+<div class="flex items-center gap-2 text-sm font-semibold text-sm text-on-surface-variant">
+<a class="hover:text-on-surface transition-colors" href="index.html">Home</a>
+<span class="text-outline-variant">/</span>
+<span class="text-on-surface font-semibold">Institutional Engagement &amp; Advisory Request</span>
+</div>
+<div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary-container text-secondary-fixed text-xs font-semibold text-xs tracking-wider uppercase">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary-fixed animate-pulse"></span>
+          Direct Fiduciary Advisory Desk
+        </div>
+</div>
+<p class="text-xs font-semibold text-xs uppercase tracking-widest text-secondary font-bold">
+        Bespoke Enterprise Advisory &amp; Strategic RFQ
+      </p>
+</div>
+</section>
+<!-- TWO-COLUMN ASYMMETRIC COMMAND LAYOUT -->
+<section class="scroll-reveal w-full bg-surface pb-space-xl">
+<div class="max-w-[1440px] mx-auto px-4 lg:px-6 lg:px-12">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-stretch"><div class="lg:col-span-5 flex flex-col justify-between gap-6"><div class="flex flex-col gap-3"><h1 class="text-3xl sm:text-5xl font-black text-headline-xl lg:text-display-lg text-on-surface tracking-tight leading-[1.08] font-bold">Hubungi Konsultan Nara Institute</h1><p class="font-body-lg text-body-lg text-on-surface-variant leading-relaxed">Connect directly with our practice leaders for bespoke strategic advisory, K3 statutory safety audits, sovereign cloud infrastructure, or enterprise governance restructuring.</p></div><div class="bg-surface-container-lowest p-6 rounded-2xl shadow-sm flex flex-col gap-5"><div class="flex items-center justify-between"><span class="text-xs font-semibold text-xs uppercase tracking-wider text-on-surface-variant font-bold">Executive Channels</span><span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-surface-container text-on-surface-variant text-xs font-semibold text-xs font-semibold"><span class="w-1.5 h-1.5 rounded-full bg-secondary"></span> Live Desk</span></div><div class="grid grid-cols-1 gap-3"><div class="flex items-center gap-3.5 p-3 rounded-xl bg-surface-container-low hover:bg-surface-container transition-colors"><div class="w-10 h-10 rounded-lg bg-primary text-secondary-fixed flex items-center justify-center shrink-0"><span class="material-symbols-outlined text-[20px]">phone_in_talk</span></div><div class="flex flex-col min-w-0"><span class="text-xs font-semibold text-xs text-on-surface-variant uppercase tracking-wider">Official Secretariat</span><a class="font-title-md text-title-md font-bold text-on-surface hover:text-secondary transition-colors truncate" href="tel:+622150889000">+62 (21) 5088-9000</a></div></div><div class="flex items-center gap-3.5 p-3 rounded-xl bg-surface-container-low hover:bg-surface-container transition-colors"><div class="w-10 h-10 rounded-lg bg-primary text-secondary-fixed flex items-center justify-center shrink-0"><span class="material-symbols-outlined text-[20px]">mark_email_read</span></div><div class="flex flex-col min-w-0"><span class="text-xs font-semibold text-xs text-on-surface-variant uppercase tracking-wider">Institutional Inquiries</span><a class="font-title-md text-title-md font-bold text-on-surface hover:text-secondary transition-colors truncate" href="mailto:advisory@vertexholding.co.id">advisory@vertexholding.co.id</a></div></div></div><div class="pt-1 flex flex-col gap-2"><span class="text-xs font-semibold text-xs text-on-surface-variant uppercase tracking-wider font-semibold">Priority WhatsApp Routing</span><div class="flex flex-wrap gap-2"><a class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-surface-container text-on-surface hover:bg-secondary-fixed hover:text-on-secondary-fixed text-sm font-semibold text-sm transition-all" href="index.html" data-whatsapp-route="Strategy & GRC" data-phone="628115088901" rel="noopener noreferrer" target="_blank"><span class="">1. Strategy &amp; GRC</span><span class="material-symbols-outlined text-[14px]">arrow_forward</span></a><a class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-surface-container text-on-surface hover:bg-secondary-fixed hover:text-on-secondary-fixed text-sm font-semibold text-sm transition-all" href="index.html" data-whatsapp-route="K3 & QHSE" data-phone="628115088902" rel="noopener noreferrer" target="_blank"><span class="">2. K3 &amp; QHSE</span><span class="material-symbols-outlined text-[14px]">arrow_forward</span></a><a class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-surface-container text-on-surface hover:bg-secondary-fixed hover:text-on-secondary-fixed text-sm font-semibold text-sm transition-all" href="index.html" data-whatsapp-route="Cyber & AI" data-phone="628115088903" rel="noopener noreferrer" target="_blank"><span class="">3. Cyber &amp; AI</span><span class="material-symbols-outlined text-[14px]">arrow_forward</span></a></div></div></div><div class="bg-surface-container-lowest p-6 rounded-2xl shadow-sm flex flex-col gap-4 flex-1 justify-between"><div class="relative w-full h-44 rounded-xl overflow-hidden shadow-inner"><div class="bg-cover bg-center w-full h-full transform hover:scale-105 transition-transform duration-700" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBCEKn8s0525pdZSAVAdW2K50wARIJs89iXflACGA3dI36L1aYZfynEO3iFcnbJEmPmxxxpxJXdHFJDB5AQfjUjWosJjHaM6wEtLNsEhEZ_yiLlSgXg4AhVhv87GxDhnF6HaOLGWY2PCWtR96IPawiMzwRaCyyWGSvucjLxIdT7eC2E4a9CR4MeGrE0UCMXc8ZVFy00mvVihkPcElDT2kHv4cRDqX7KYyW-wm8jYTSU')"></div><div class="absolute inset-0 bg-gradient-to-t from-primary/85 via-primary/20 to-transparent flex flex-col justify-end p-4"><span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed text-xs font-semibold text-xs font-bold w-fit mb-1">SCBD Sovereign Command</span><p class="text-base font-bold text-headline-sm text-on-primary font-bold">Headquarters Boardroom</p></div></div><div class="flex flex-col gap-1 text-on-surface-variant font-body-sm text-body-sm"><p class="font-semibold text-on-surface">Nara Tower, Level 48 &amp; 28, Pacific Century Place (SCBD Lot 28)</p><p class="">Jl. Jend. Sudirman Kav. 52&ndash;53, Senayan, Jakarta Selatan 12190</p></div><div class="pt-2 border-t border-outline-variant/30 flex items-center gap-2 text-on-surface-variant text-xs font-semibold text-xs"><span class="material-symbols-outlined text-[18px] text-secondary">verified_user</span><span class="">Discretion &amp; mutual non-disclosure protected under statutory attorney-fiduciary privilege.</span></div></div></div><div class="lg:col-span-7 flex flex-col"><div class="bg-surface-container-lowest rounded-[28px] p-7 md:p-10 shadow-sm relative overflow-hidden flex flex-col h-full justify-between"><div class="relative w-full h-32 rounded-2xl overflow-hidden mb-6 shrink-0"><div class="bg-cover bg-center w-full h-full" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAxePhzot0J-ijtxHU7kao58ThlID3K4ZjCiFSf1gM3gUiuxuIHZTo58g4e1mNFSBtq5y6MObpyMKXu7WJA2AfgybN4wiONDpaUlDtXebf8oHVruSAKX2yNfNVKvFbtYi9iqgzkKYAWOUbp4ucch-gauQpch9GLB4q_OEYiKireToj-JBbxhRwIBSPIXfoecpIGde5lWkQslvSoJUxREaqhYAEOlFKczbkImdMMKWob')"></div><div class="absolute inset-0 bg-gradient-to-r from-primary/85 via-primary/60 to-transparent flex flex-col justify-center p-6 text-on-primary"><div class="inline-flex items-center gap-2 px-2.5 py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed text-xs font-semibold text-xs font-bold w-fit mb-1.5">SECURE INSTITUTIONAL PORTAL</div><h2 class="text-base font-bold text-headline-sm text-on-primary font-bold">Formulir Permintaan Konsultasi &amp; Penawaran (RFQ)</h2><p class="font-body-sm text-body-sm text-primary-fixed-dim">Submit enterprise scope. Practice Partners respond within 4 business hours.</p></div></div><form class="flex flex-col gap-4 flex-1 justify-between" id="institutionalRfqForm" onsubmit="event.preventDefault(); document.getElementById('successNotification').classList.remove('hidden');"><div class="grid grid-cols-1 sm:grid-cols-2 gap-4"><div class="flex flex-col gap-1.5"><label class="text-xs font-semibold text-xs uppercase tracking-wider text-on-surface-variant font-bold" for="fullName">Full Name &amp; Directorial Title <span class="text-error">*</span></label><input class="w-full bg-surface-container-low px-4 py-3 rounded-xl font-body-md text-body-md text-on-surface placeholder:text-outline focus:outline-none focus:bg-surface-container-lowest transition-colors shadow-inner" id="fullName" placeholder="e.g., Ir. Bambang Wicaksono, M.M." required="" type="text"></div><div class="flex flex-col gap-1.5"><label class="text-xs font-semibold text-xs uppercase tracking-wider text-on-surface-variant font-bold" for="corporateEmail">Corporate / Institutional Email <span class="text-error">*</span></label><input class="w-full bg-surface-container-low px-4 py-3 rounded-xl font-body-md text-body-md text-on-surface placeholder:text-outline focus:outline-none focus:bg-surface-container-lowest transition-colors shadow-inner" id="corporateEmail" placeholder="name@company.co.id" required="" type="email"></div></div><div class="grid grid-cols-1 sm:grid-cols-2 gap-4"><div class="flex flex-col gap-1.5"><label class="text-xs font-semibold text-xs uppercase tracking-wider text-on-surface-variant font-bold" for="entityName">Company / Conglomerate / BUMN Entity <span class="text-error">*</span></label><input class="w-full bg-surface-container-low px-4 py-3 rounded-xl font-body-md text-body-md text-on-surface placeholder:text-outline focus:outline-none focus:bg-surface-container-lowest transition-colors shadow-inner" id="entityName" placeholder="e.g., PT Nusantara Energi Tbk." required="" type="text"></div><div class="flex flex-col gap-1.5"><label class="text-xs font-semibold text-xs uppercase tracking-wider text-on-surface-variant font-bold" for="executivePhone">Direct Phone / Executive WhatsApp <span class="text-error">*</span></label><input class="w-full bg-surface-container-low px-4 py-3 rounded-xl font-body-md text-body-md text-on-surface placeholder:text-outline focus:outline-none focus:bg-surface-container-lowest transition-colors shadow-inner" id="executivePhone" placeholder="+62 811-xxxx-xxxx" required="" type="tel"></div></div><div class="flex flex-col gap-1.5"><label class="text-xs font-semibold text-xs uppercase tracking-wider text-on-surface-variant font-bold" for="strategicPillar">Strategic Advisory Pillar Required <span class="text-error">*</span></label><div class="relative"><select class="w-full bg-surface-container-low px-4 py-3 rounded-xl font-body-md text-body-md text-on-surface appearance-none focus:outline-none focus:bg-surface-container-lowest transition-colors cursor-pointer shadow-inner" id="strategicPillar" required=""><option disabled="" selected="" value="">Select Strategic Practice Pillar...</option><option value="grc">01 / Governance, Board Advisory &amp; BUMN GRC Restructuring</option><option value="cloud-ai">02 / Applied Enterprise AI &amp; Sovereign Cloud Infrastructure</option><option value="qhse">03 / Turnkey Occupational Safety (K3), SMK3 &amp; Industrial CSMS</option><option value="cyber">04 / Sovereign Cyber Defense SOC &amp; ISO 27001 Hardening</option><option value="capital">05 / Strategic Capital, Cross-Border M&amp;A &amp; PMI Integration</option><option value="succession">06 / Executive Succession, Directorial Search &amp; Holding Academy</option></select><span class="material-symbols-outlined pointer-events-none absolute right-4 top-1/2 -translate-y-1/2 text-outline text-[20px]">expand_more</span></div></div><div class="grid grid-cols-1 sm:grid-cols-2 gap-4"><div class="flex flex-col gap-1.5"><label class="text-xs font-semibold text-xs uppercase tracking-wider text-on-surface-variant font-bold" for="timeline">Estimated Engagement Timeline</label><div class="relative"><select class="w-full bg-surface-container-low px-4 py-3 rounded-xl font-body-md text-body-md text-on-surface appearance-none focus:outline-none focus:bg-surface-container-lowest transition-colors cursor-pointer shadow-inner" id="timeline"><option value="immediate">Immediate Scoping (Within 30 Days)</option><option value="q2">Q2 / Q3 2025 Planned Mandate</option><option value="multi-year">Multi-Year Fiduciary Advisory Program</option><option value="statutory">Statutory Annual GRC / K3 Re-Audit</option></select><span class="material-symbols-outlined pointer-events-none absolute right-4 top-1/2 -translate-y-1/2 text-outline text-[20px]">expand_more</span></div></div><div class="flex flex-col gap-1.5"><label class="text-xs font-semibold text-xs uppercase tracking-wider text-on-surface-variant font-bold" for="venue">Preferred Engagement Format</label><div class="relative"><select class="w-full bg-surface-container-low px-4 py-3 rounded-xl font-body-md text-body-md text-on-surface appearance-none focus:outline-none focus:bg-surface-container-lowest transition-colors cursor-pointer shadow-inner" id="venue"><option value="scbd">SCBD Headquarters (Jakarta Executive Boardroom)</option><option value="surabaya">Surabaya Industrial Hub (East Java)</option><option value="balikpapan">Balikpapan Energy Enclave (Kaltim)</option><option value="virtual">Virtual Encrypted Sovereign Video Briefing</option><option value="client-hq">On-Site Diagnostic at Client Headquarters</option></select><span class="material-symbols-outlined pointer-events-none absolute right-4 top-1/2 -translate-y-1/2 text-outline text-[20px]">expand_more</span></div></div></div><div class="flex flex-col gap-1.5"><label class="text-xs font-semibold text-xs uppercase tracking-wider text-on-surface-variant font-bold" for="projectBrief">Project Scope / Advisory Brief <span class="text-error">*</span></label><textarea class="w-full bg-surface-container-low px-4 py-2.5 rounded-xl font-body-md text-body-md text-on-surface placeholder:text-outline focus:outline-none focus:bg-surface-container-lowest transition-colors resize-none shadow-inner" id="projectBrief" placeholder="Briefly summarize organizational objectives, statutory audit requirements, scale of operations, or transformation milestones..." required="" rows="3"></textarea></div><div class="flex items-start gap-3 pt-0.5"><input class="mt-1 w-4 h-4 rounded text-primary focus:ring-0 accent-primary cursor-pointer" id="legalConsent" required="" type="checkbox"><label class="font-body-sm text-body-sm text-on-surface-variant leading-snug cursor-pointer" for="legalConsent">I acknowledge and consent to enterprise data handling under the Indonesian Personal Data Protection Act (UU PDP No. 27/2022) and the Nara Sovereign Confidentiality Charter.</label></div><div class="pt-1"><button class="w-full py-3.5 px-6 rounded-full bg-secondary-fixed text-on-secondary-fixed text-sm font-semibold text-sm font-bold tracking-wide uppercase hover:bg-secondary-container shadow-md transition-all flex items-center justify-center gap-2 group" type="submit"><span class="">Submit Request for Quotation (RFQ)</span><span class="material-symbols-outlined text-[20px] group-hover:translate-x-1 transition-transform">arrow_forward</span></button></div><div class="hidden p-4 rounded-xl bg-secondary-container text-on-secondary-container flex items-center gap-3" id="successNotification"><span class="material-symbols-outlined text-[24px]">task_alt</span><div class="flex flex-col"><span class="text-sm font-semibold text-sm font-bold">Mandate Dispatched Successfully</span><span class="font-body-sm text-body-sm">Your dossier has been routed to our Practice Managing Partner. A secure calendar invite and encrypted brief will follow shortly.</span></div></div><div class="pt-1 flex flex-wrap items-center justify-between gap-2 text-xs font-semibold text-xs text-on-surface-variant border-t border-outline-variant/30 pt-3"><span class="inline-flex items-center gap-1.5"><span class="material-symbols-outlined text-[16px] text-secondary">lock</span> 256-Bit SSL Encrypted Protocol</span><span class="inline-flex items-center gap-1.5"><span class="material-symbols-outlined text-[16px] text-secondary">verified</span> Strict Fiduciary Confidentiality</span><span class="inline-flex items-center gap-1.5"><span class="material-symbols-outlined text-[16px] text-secondary">gavel</span> BUMN &amp; OJK Compliant</span></div></form></div></div></div>
+</div>
+</section>
+<!-- SLA & INSTITUTIONAL RESPONSE TIMELINES -->
+<section class="scroll-reveal w-full bg-surface-container-low py-12 lg:py-16"><div class="max-w-[1440px] mx-auto px-4 lg:px-6 lg:px-12 flex flex-col gap-6"><div class="flex flex-col md:flex-row md:items-end justify-between gap-4"><div><span class="text-xs font-semibold text-xs uppercase tracking-widest text-secondary font-bold">STANDAR LAYANAN</span><h2 class="text-2xl sm:text-3xl font-extrabold text-headline-lg text-on-surface font-bold tracking-tight mt-1">Komitmen Waktu Respons</h2></div><p class="font-body-md text-body-md text-on-surface-variant max-w-md">Alur komunikasi yang terstruktur, cepat, dan profesional bagi jajaran pimpinan organisasi.</p></div><div class="grid grid-cols-1 md:grid-cols-3 gap-6"><div class="bg-surface-container-lowest p-6 rounded-2xl shadow-sm flex flex-col gap-3"><div class="flex items-center justify-between"><span class="text-xs font-semibold text-xs uppercase tracking-wider text-on-surface-variant font-bold">Langkah 01</span><span class="px-2.5 py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed text-xs font-semibold text-xs font-bold">&lt; 24 Jam</span></div><h3 class="font-title-md text-title-md font-bold text-on-surface">Review 24 Jam</h3><p class="font-body-sm text-body-sm text-on-surface-variant">Pemeriksaan kelengkapan berkas &amp; initial partner review untuk konfirmasi keselarasan mandat strategis.</p></div><div class="bg-surface-container-lowest p-6 rounded-2xl shadow-sm flex flex-col gap-3"><div class="flex items-center justify-between"><span class="text-xs font-semibold text-xs uppercase tracking-wider text-on-surface-variant font-bold">Langkah 02</span><span class="px-2.5 py-0.5 rounded-full bg-primary text-secondary-fixed text-xs font-semibold text-xs font-bold">Hari ke-2</span></div><h3 class="font-title-md text-title-md font-bold text-on-surface">Diskusi NDA</h3><p class="font-body-sm text-body-sm text-on-surface-variant">Penandatanganan bilateral NDA dilanjutkan sesi scoping tatap muka di SCBD atau video conference aman.</p></div><div class="bg-surface-container-lowest p-6 rounded-2xl shadow-sm flex flex-col gap-3"><div class="flex items-center justify-between"><span class="text-xs font-semibold text-xs uppercase tracking-wider text-on-surface-variant font-bold">Langkah 03</span><span class="px-2.5 py-0.5 rounded-full bg-surface-container-high text-on-surface text-xs font-semibold text-xs font-bold">Hari ke-3&ndash;5</span></div><h3 class="font-title-md text-title-md font-bold text-on-surface">Penawaran Resmi</h3><p class="font-body-sm text-body-sm text-on-surface-variant">Penyampaian proposal komprehensif mencakup Terms of Reference (ToR), roadmap eksekusi, &amp; komersial.</p></div></div></div></section>
+<!-- FAQ & PRE-CONSULTATION ADVISORY ACCORDION -->
+<section class="scroll-reveal w-full bg-surface py-12 lg:py-16"><div class="max-w-[1440px] mx-auto px-4 lg:px-6 lg:px-12 flex flex-col gap-8"><div class="flex flex-col items-center text-center max-w-2xl mx-auto gap-2"><span class="text-xs font-semibold text-xs uppercase tracking-widest text-secondary font-bold">INFORMASI PENTING</span><h2 class="text-2xl sm:text-3xl font-extrabold text-headline-lg text-on-surface font-bold tracking-tight">Pertanyaan yang Sering Diajukan (FAQ)</h2><p class="font-body-md text-body-md text-on-surface-variant">Penjelasan ringkas mengenai kerahasiaan data, legalitas kemitraan, dan estimasi waktu kerja.</p></div><div class="grid grid-cols-1 md:grid-cols-3 gap-6"><div class="bg-surface-container-lowest p-6 rounded-2xl shadow-sm flex flex-col justify-between gap-4"><div class="flex flex-col gap-2.5"><div class="w-8 h-8 rounded-lg bg-surface-container text-on-surface flex items-center justify-center font-bold text-sm">01</div><h3 class="font-title-md text-title-md font-bold text-on-surface">Bagaimana kerahasiaan data sebelum NDA ditandatangani?</h3><p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">Dijamin dengan protokol enkripsi enterprise air-gapped dan tinjauan internal kepatuhan hukum bersertifikasi sebelum proses telaah dimulai.</p></div><div class="pt-3 border-t border-outline-variant/20 flex items-center gap-1.5 text-xs font-semibold text-xs text-secondary font-semibold"><span class="material-symbols-outlined text-[16px]">verified</span><span class="">Enkripsi Enterprise Aktif</span></div></div><div class="bg-surface-container-lowest p-6 rounded-2xl shadow-sm flex flex-col justify-between gap-4"><div class="flex flex-col gap-2.5"><div class="w-8 h-8 rounded-lg bg-surface-container text-on-surface flex items-center justify-center font-bold text-sm">02</div><h3 class="font-title-md text-title-md font-bold text-on-surface">Apakah institusi / BUMN dapat menunjuk langsung?</h3><p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">Ya. Nara terdaftar resmi di direktori rekanan LKPP dan KemenBUMN serta memenuhi regulasi pengadaan barang dan jasa pemerintah.</p></div><div class="pt-3 border-t border-outline-variant/20 flex items-center gap-1.5 text-xs font-semibold text-xs text-secondary font-semibold"><span class="material-symbols-outlined text-[16px]">policy</span><span class="">LKPP &amp; BUMN Certified</span></div></div><div class="bg-surface-container-lowest p-6 rounded-2xl shadow-sm flex flex-col justify-between gap-4"><div class="flex flex-col gap-2.5"><div class="w-8 h-8 rounded-lg bg-surface-container text-on-surface flex items-center justify-center font-bold text-sm">03</div><h3 class="font-title-md text-title-md font-bold text-on-surface">Berapa lama estimasi penyusunan proposal konsultasi?</h3><p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">Proposal komprehensif dan Terms of Reference (ToR) diserahkan dalam 3&ndash;5 hari kerja pasca-scoping, dengan opsi akselerasi jadwal mendesak.</p></div><div class="pt-3 border-t border-outline-variant/20 flex items-center gap-1.5 text-xs font-semibold text-xs text-secondary font-semibold"><span class="material-symbols-outlined text-[16px]">schedule</span><span class="">Komitmen 3&ndash;5 Hari Kerja</span></div></div></div></div></section>
+<!-- EXECUTIVE CLOSING CALL TO ACTION -->
+<section class="scroll-reveal w-full bg-primary-container text-on-primary py-12 lg:py-16">
+<div class="max-w-[1440px] mx-auto px-4 lg:px-6 lg:px-12">
+<div class="flex flex-col lg:flex-row items-center justify-between gap-8 bg-surface-container-highest/5 p-8 lg:p-12 rounded-[28px] border border-outline-variant/10">
+<div class="flex flex-col gap-2 max-w-2xl">
+<span class="text-xs font-semibold text-xs uppercase tracking-widest text-secondary-fixed font-bold">SESI KONSULTASI TATAP MUKA</span>
+<h2 class="text-2xl sm:text-3xl font-extrabold text-headline-lg font-bold text-on-primary tracking-tight">
+            Jadwalkan Diskusi Strategis Bersama Tim Konsultan Senior
+          </h2>
+<p class="font-body-md text-body-md text-primary-fixed-dim">
+            Konsultan senior kami menyediakan sesi telaah langsung bagi Direksi, Komisaris, dan Pimpinan Lembaga di kantor kami atau kantor Anda.
+          </p>
+</div>
+<div class="flex flex-wrap items-center gap-4 shrink-0">
+<a class="inline-flex items-center justify-center px-6 py-3.5 rounded-full bg-secondary-fixed text-on-secondary-fixed text-sm font-semibold text-sm font-bold hover:bg-secondary-container transition-all shadow-md" href="tel:+622150889000">
+            Direct Protocol Line: (021) 5088-9000
+          </a>
+<button class="inline-flex items-center justify-center px-6 py-3.5 rounded-full bg-surface-container-highest/10 text-on-primary text-sm font-semibold text-sm font-semibold hover:bg-surface-container-highest/20 transition-all" onclick="window.scrollTo({top: 0, behavior: 'smooth'}); document.getElementById('fullName').focus();">
+            Open RFQ Form â†‘
+          </button>
+</div>
+</div>
+</div>
+</section>
+</div></main><!-- CORPORATE MULTI-OFFICE FOOTER -->
+<footer class="w-full bg-[#0B0D0C] text-white pt-16 pb-12 border-t border-white/10 mt-16">
+  <div class="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-12 space-y-12">
+    
+    <!-- Top Footer: Brand & Offices Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 pb-12 border-b border-white/10">
+      
+      <!-- Brand & Mission -->
+      <div class="lg:col-span-2 space-y-4">
+        <div class="flex items-center gap-3.5">
+          <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-[#9E1B22] to-[#D8E94B] p-0.5 flex items-center justify-center">
+            <div class="w-full h-full bg-[#0B0D0C] rounded-[10px] flex items-center justify-center">
+              <span class="font-extrabold text-sm text-white tracking-tighter">NI</span>
+            </div>
+          </div>
+          <div class="flex flex-col">
+            <span class="font-extrabold text-white tracking-wider text-base leading-none">NARA</span>
+            <span class="text-[#D8E94B] text-[10px] tracking-widest leading-none mt-1 uppercase font-bold">INSTITUTE</span>
+          </div>
+        </div>
+        <p class="text-xs text-white/60 leading-relaxed max-w-sm">
+          Lembaga rujukan nasional dalam konsultasi strategi bisnis, tata kelola risiko GRC, sertifikasi sistem manajemen mutu/K3, dan pengembangan human capital berdaya saing global.
+        </p>
+        <div class="flex items-center gap-3 text-white/50 pt-2">
+          <a class="w-8 h-8 rounded-full bg-white/5 hover:bg-white/15 flex items-center justify-center text-white transition-colors" href="https://linkedin.com" target="_blank" aria-label="LinkedIn">
+            <span class="material-symbols-outlined text-[16px]">public</span>
+          </a>
+          <a class="w-8 h-8 rounded-full bg-white/5 hover:bg-white/15 flex items-center justify-center text-white transition-colors" href="https://youtube.com" target="_blank" aria-label="YouTube">
+            <span class="material-symbols-outlined text-[16px]">smart_display</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Office 1: Head Office -->
+      <div class="space-y-2">
+        <span class="text-[11px] font-bold text-[#D8E94B] uppercase tracking-wider block">Headquarters (HQ)</span>
+        <p class="text-xs text-white/70 leading-relaxed">
+          Gedung Permata Kuningan Lt. 17<br/>
+          Jl. Kuningan Mulia, Setiabudi<br/>
+          Jakarta Selatan, 12920
+        </p>
+        <p class="text-xs text-white/50 pt-1">P: (021) 5088-9000<br/>E: corporate@nara-institute.id</p>
+      </div>
+
+      <!-- Office 2: Learning Center / Academy -->
+      <div class="space-y-2">
+        <span class="text-[11px] font-bold text-[#D8E94B] uppercase tracking-wider block">Nara Academy Center</span>
+        <p class="text-xs text-white/70 leading-relaxed">
+          The Hive Office Park Lt. 2<br/>
+          Jl. DI Panjaitan Kav. 2, Cawang<br/>
+          Jakarta Timur, 13340
+        </p>
+        <p class="text-xs text-white/50 pt-1">P: +62 811-1028-351<br/>E: academy@nara-institute.id</p>
+      </div>
+
+      <!-- Office 3: Regional Office -->
+      <div class="space-y-2">
+        <span class="text-[11px] font-bold text-[#D8E94B] uppercase tracking-wider block">Regional Surabaya</span>
+        <p class="text-xs text-white/70 leading-relaxed">
+          AMG Tower Lt. 17<br/>
+          Jl. Dukuh Menanggal No. 1A<br/>
+          Surabaya, Jawa Timur, 60234
+        </p>
+        <p class="text-xs text-white/50 pt-1">P: (031) 825-1700<br/>E: east@nara-institute.id</p>
+      </div>
+
+    </div>
+
+    <!-- Bottom Tagline & Copyright -->
+    <div class="flex flex-col md:flex-row items-center justify-between gap-6 pt-4 text-xs text-white/50">
+      <div class="flex flex-col items-center md:items-start">
+        <span class="text-white font-extrabold text-sm tracking-wide">Fueled by Knowledge. Powered by Ideas.</span>
+        <span class="text-[11px] text-white/40 mt-0.5">© 2026 PT Nara Solusi Korporat / Nara Institute. All rights reserved.</span>
+      </div>
+      <div class="flex items-center gap-6">
+        <a class="hover:text-white transition-colors" href="about.html">Tentang Kami</a>
+        <a class="hover:text-white transition-colors" href="solutions.html">Katalog Solusi</a>
+        <a class="hover:text-white transition-colors" href="contact.html">Pusat Bantuan</a>
+        <a class="hover:text-white transition-colors" href="privacy.html">Kebijakan Privasi</a>
+      </div>
+    </div>
+
+  </div>
+</footer>
+
+<div id="rfqSuccessModal" class="fixed inset-0 z-[110] bg-black/70 backdrop-blur-md hidden items-center justify-center p-4 transition-all duration-300">
+  <div class="bg-[#141713] text-white max-w-lg w-full rounded-3xl p-8 border border-white/10 shadow-2xl flex flex-col items-center text-center space-y-6">
+    <div class="w-16 h-16 rounded-full bg-[#E2F163]/10 border-2 border-[#E2F163] flex items-center justify-center text-[#E2F163]">
+      <span class="material-symbols-outlined text-[36px]">verified</span>
+    </div>
+    <div class="space-y-2">
+      <span class="px-3 py-1 rounded-full bg-[#E2F163] text-[#141713] text-[11px] font-bold uppercase tracking-wider">Mandate Dispatched</span>
+      <h3 class="text-2xl font-bold text-white tracking-tight">Permintaan Konsultasi Diterima</h3>
+      <p class="text-white/70 text-sm leading-relaxed">
+        Thank you, <span id="modalClientName" class="text-white font-semibold">Client</span> from <span id="modalCompanyName" class="text-white font-semibold">Enterprise</span>. Your inquiry has been prioritized under our Fiduciary Discretion Charter.
+      </p>
+    </div>
+    <div class="w-full p-4 rounded-2xl bg-white/5 border border-white/10 text-left space-y-2 text-xs text-white/80">
+      <div class="flex justify-between"><span class="text-white/50">Tracking Reference:</span><span class="font-mono text-[#E2F163] font-bold">#VTX-2026-8942</span></div>
+      <div class="flex justify-between"><span class="text-white/50">Expected SLA:</span><span>Within 4 Business Hours</span></div>
+      <div class="flex justify-between"><span class="text-white/50">STANDAR LAYANAN:</span><span>SCBD Executive Secretariat</span></div>
+    </div>
+    <button id="closeModalBtn" class="w-full py-3.5 px-6 rounded-full bg-[#E2F163] hover:bg-[#d6e64c] text-[#141713] font-bold text-sm transition-all shadow-lg">
+      Acknowledge & Return to Portal
+    </button>
+  </div>
+</div>
+</body></html>

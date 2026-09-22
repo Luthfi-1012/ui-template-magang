@@ -1,0 +1,759 @@
+﻿<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta content="web_standard" name="shell-type"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+
+
+  </style>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "tertiary-fixed-dim": "#c5c7be",
+            "tertiary-fixed": "#e1e3da",
+            "surface-container-lowest": "#ffffff",
+            "error": "#ba1a1a",
+            "on-primary-fixed-variant": "#454843",
+            "secondary": "#5b6400",
+            "background": "#faf9f4",
+            "on-primary-container": "#82857f",
+            "secondary-fixed-dim": "#c1d045",
+            "surface-tint": "#5c5f5a",
+            "inverse-on-surface": "#f2f1ec",
+            "primary-fixed-dim": "#c5c7c1",
+            "on-tertiary-fixed-variant": "#454841",
+            "primary-container": "#191c18",
+            "surface-bright": "#faf9f4",
+            "surface-container": "#efeee9",
+            "on-tertiary": "#ffffff",
+            "surface-container-highest": "#e3e3de",
+            "outline-variant": "#c5c7c1",
+            "surface": "#faf9f4",
+            "tertiary-container": "#191d17",
+            "on-error": "#ffffff",
+            "on-secondary-fixed": "#1a1e00",
+            "inverse-primary": "#c5c7c1",
+            "outline": "#757872",
+            "primary-fixed": "#e1e3dc",
+            "surface-variant": "#e3e3de",
+            "error-container": "#ffdad6",
+            "on-tertiary-fixed": "#191d17",
+            "on-error-container": "#93000a",
+            "inverse-surface": "#30312e",
+            "surface-container-low": "#f5f4ef",
+            "surface-container-high": "#e9e8e3",
+            "secondary-fixed": "#ddec5f",
+            "primary": "#000000",
+            "on-background": "#1b1c19",
+            "on-tertiary-container": "#82857c",
+            "on-primary-fixed": "#191c18",
+            "on-secondary-container": "#5f6800",
+            "on-surface": "#1b1c19",
+            "on-surface-variant": "#454843",
+            "on-secondary": "#ffffff",
+            "secondary-container": "#dae95c",
+            "on-secondary-fixed-variant": "#444b00",
+            "surface-dim": "#dbdad5",
+            "tertiary": "#000000",
+            "on-primary": "#ffffff"
+          },
+          borderRadius: {
+            DEFAULT: "0.25rem",
+            lg: "0.5rem",
+            xl: "0.75rem",
+            full: "9999px"
+          },
+          spacing: {
+            "gutter": "1.5rem",
+            "margin-mobile": "1.25rem",
+            "space-xs": "0.25rem",
+            "space-lg": "1.75rem",
+            "space-md": "1rem",
+            "gutter-mobile": "1rem",
+            "space-sm": "0.5rem",
+            "margin": "3rem",
+            "space-xl": "2.5rem"
+          },
+          fontFamily: {
+            "body-sm": ["Plus Jakarta Sans"],
+            "label-md": ["Plus Jakarta Sans"],
+            "headline-xl": ["Plus Jakarta Sans"],
+            "title-md": ["Plus Jakarta Sans"],
+            "display-lg": ["Plus Jakarta Sans"],
+            "display-lg-mobile": ["Plus Jakarta Sans"],
+            "headline-xl-mobile": ["Plus Jakarta Sans"],
+            "headline-lg": ["Plus Jakarta Sans"],
+            "body-md": ["Plus Jakarta Sans"],
+            "label-sm": ["Plus Jakarta Sans"],
+            "headline-sm": ["Plus Jakarta Sans"],
+            "body-lg": ["Plus Jakarta Sans"]
+          },
+          fontSize: {
+            "body-sm": ["13px", { lineHeight: "18px", fontWeight: "400" }],
+            "label-md": ["13px", { lineHeight: "16px", letterSpacing: "0.04em", fontWeight: "600" }],
+            "headline-xl": ["40px", { lineHeight: "48px", letterSpacing: "-0.025em", fontWeight: "700" }],
+            "title-md": ["18px", { lineHeight: "24px", letterSpacing: "-0.005em", fontWeight: "600" }],
+            "display-lg": ["56px", { lineHeight: "64px", letterSpacing: "-0.03em", fontWeight: "700" }],
+            "display-lg-mobile": ["36px", { lineHeight: "44px", letterSpacing: "-0.02em", fontWeight: "700" }],
+            "headline-xl-mobile": ["28px", { lineHeight: "36px", letterSpacing: "-0.015em", fontWeight: "600" }],
+            "headline-lg": ["32px", { lineHeight: "40px", letterSpacing: "-0.02em", fontWeight: "600" }],
+            "body-md": ["15px", { lineHeight: "22px", fontWeight: "400" }],
+            "label-sm": ["11px", { lineHeight: "14px", letterSpacing: "0.08em", fontWeight: "700" }],
+            "headline-sm": ["22px", { lineHeight: "28px", letterSpacing: "-0.01em", fontWeight: "600" }],
+            "body-lg": ["18px", { lineHeight: "28px", fontWeight: "400" }]
+          }
+        }
+      }
+    }
+  </script>
+<script type="module" src="/src/js/global.js"></script>
+<style>
+    @layer base {
+      html { scroll-behavior: smooth; }
+      body { margin: 0; padding: 0; overflow-x: hidden; }
+    }
+    ::-webkit-scrollbar { display: none; }
+    .interactive-card {
+      transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .interactive-card:hover {
+      transform: translateY(-6px);
+    }
+    .scroll-reveal {
+      opacity: 0;
+      transform: translateY(28px);
+      transition: opacity 0.75s cubic-bezier(0.16, 1, 0.3, 1), transform 0.75s cubic-bezier(0.16, 1, 0.3, 1);
+      will-change: opacity, transform;
+    }
+    .scroll-reveal.revealed {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    .parallax-bg {
+      will-change: transform;
+      transition: transform 0.1s cubic-bezier(0, 0, 0.2, 1);
+    }
+  </style>
+</head>
+<body class="bg-background font-sans text-on-surface antialiased selection:bg-secondary-container selection:text-on-secondary-fixed">
+<!-- FLOATING HEADER / NAVBAR -->
+<!-- FLOATING HEADER / NAVBAR -->
+<header class="fixed top-0 inset-x-0 z-50 pt-4 px-4 sm:px-6 lg:px-12 pointer-events-none">
+  <div class="max-w-[1440px] mx-auto">
+    <div class="pointer-events-auto h-20 bg-[#0B0D0C]/90 backdrop-blur-xl border border-white/10 rounded-full px-6 lg:px-8 flex items-center justify-between shadow-[0_16px_36px_rgba(0,0,0,0.35)]">
+      <!-- Logo -->
+      <a class="flex items-center gap-3.5 shrink-0 focus:outline-none group" href="index.html">
+        <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-[#9E1B22] via-[#C52631] to-[#D8E94B] p-0.5 flex items-center justify-center shadow-lg group-hover:scale-105 transition-transform">
+          <div class="w-full h-full bg-[#0B0D0C] rounded-[10px] flex items-center justify-center">
+            <span class="font-extrabold text-sm text-white tracking-tighter">NI</span>
+          </div>
+        </div>
+        <div class="flex flex-col">
+          <span class="font-extrabold text-white tracking-wider text-[15px] leading-none">NARA</span>
+          <span class="text-[#D8E94B] text-[9px] tracking-widest leading-none mt-1 uppercase font-bold">INSTITUTE</span>
+        </div>
+      </a>
+      
+      <!-- Navigation Links -->
+      <nav class="hidden xl:flex items-center gap-8">
+        <a class="text-[13px] font-semibold text-white/70 hover:text-white transition-colors" href="index.html" >Beranda</a>
+        <a class="text-[13px] font-semibold text-white/70 hover:text-white transition-colors" href="solutions.html" >Solusi &amp; Layanan</a>
+        <a class="text-[13px] font-semibold text-white font-bold border-b-2 border-[#9E1B22] pb-1 transition-colors" href="about.html" aria-current="page">Tentang Kami</a>
+        <a class="text-[13px] font-semibold text-white/70 hover:text-white transition-colors" href="insights.html" >Pusat Wawasan</a>
+        <a class="text-[13px] font-semibold text-white/70 hover:text-white transition-colors" href="contact.html" >Kontak &amp; RFQ</a>
+      </nav>
+      
+      <!-- Right CTA / Action -->
+      <div class="flex items-center gap-4">
+        <div class="hidden md:flex flex-col items-end border-r border-white/15 pr-4">
+          <span class="text-white/50 uppercase tracking-wider text-[9px] font-semibold">Hotline Eksekutif</span>
+          <a class="text-[13px] font-bold text-white tracking-tight hover:text-[#D8E94B] transition-colors flex items-center gap-1.5" href="https://wa.me/628111028351" target="_blank">
+            <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+            +62 811-1028-351
+          </a>
+        </div>
+        <a class="h-10 px-5 bg-gradient-to-r from-[#9E1B22] to-[#b8232c] hover:from-[#b8232c] hover:to-[#9E1B22] text-white text-[13px] font-bold rounded-full flex items-center justify-center gap-2 transition-all shadow-lg hover:shadow-red-900/40" href="contact.html">
+          <span>Konsultasi Kemitraan</span>
+          <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+        </a>
+      </div>
+    </div>
+  </div>
+</header>
+<main class="w-full pt-32 sm:pt-36 bg-[#F8F7F2]"><div class="flex flex-col w-full">
+<!-- BREADCRUMB & REGISTRY METADATA BAR -->
+<section class="scroll-reveal max-w-[1440px] mx-auto w-full px-4 sm:px-6 lg:px-12 pt-8 pb-6">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 py-3 px-6 rounded-2xl bg-surface-container-low shadow-sm">
+<div class="flex items-center gap-2 text-sm font-semibold text-sm text-on-surface-variant flex-wrap">
+<a class="hover:text-primary transition-colors" href="index.html">Home</a>
+<span class="text-outline-variant">/</span>
+<a class="hover:text-primary transition-colors" href="index.html">Institutional Profile</a>
+<span class="text-outline-variant">/</span>
+<span class="text-primary font-semibold">Ecosystem Directory &amp; Governance</span>
+</div>
+<div class="inline-flex items-center gap-2.5 px-3.5 py-1.5 rounded-full bg-surface-container-lowest shadow-sm self-start sm:self-auto">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary-fixed-dim"></span>
+<span class="text-xs font-semibold text-xs uppercase tracking-wider text-on-surface font-semibold">INSTITUTIONAL HOLDING DIRECTORY &bull; REG. NO. AHU-0019284</span>
+</div>
+</div>
+</section>
+<!-- EXECUTIVE STATEMENT HERO & HIGH-ALTITUDE OVERVIEW -->
+<section class="scroll-reveal max-w-[1440px] mx-auto w-full px-4 sm:px-6 lg:px-12 py-10 lg:py-16">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-start">
+<!-- Left Column: Editorial Manifesto -->
+<div class="lg:col-span-8 flex flex-col space-y-6">
+<div class="inline-flex items-center gap-2.5 px-3.5 py-1 rounded-full bg-surface-container-high w-fit">
+<span class="w-2 h-2 rounded-full bg-secondary animate-pulse"></span>
+<span class="text-xs font-semibold text-xs tracking-wider uppercase text-on-surface-variant font-bold">The Holding Ecosystem</span>
+</div>
+<h1 class="text-3xl sm:text-5xl font-black text-display-lg text-primary tracking-tight leading-[1.08] max-w-4xl">
+          Menyatukan Keahlian Multidisiplin untuk Ketahanan &amp; Pertumbuhan Korporasi
+        </h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-3xl leading-relaxed pt-2">
+          Founded to safeguard and accelerate Southeast Asia's critical infrastructure, Nara Institute operates as an integrated multi-disciplinary ecosystem. We unite top-tier strategic management, GRC compliance, occupational safety (K3), sovereign cybersecurity, and applied artificial intelligence to steward national conglomerates and state-owned enterprises (BUMN) toward intergenerational endurance.
+        </p>
+<!-- Fast Actions & Anchor Links -->
+<div class="flex flex-wrap items-center gap-4 pt-4">
+<a class="h-12 px-7 bg-primary text-on-primary text-sm font-semibold text-sm rounded-full inline-flex items-center gap-2 hover:bg-inverse-surface transition-all shadow-sm" href="#ecosystem-matrix">
+<span>Explore 4 Operating Pillars</span>
+<span class="material-symbols-outlined text-[18px]">arrow_downward</span>
+</a>
+<a class="h-12 px-6 bg-surface-container-lowest text-primary text-sm font-semibold text-sm rounded-full inline-flex items-center gap-2 hover:bg-surface-container transition-all shadow-sm" href="#leadership-board">
+<span>Executive Directorate</span>
+<span class="material-symbols-outlined text-[18px]">north_east</span>
+</a>
+<span class="font-body-sm text-body-sm text-on-surface-variant ml-2 hidden sm:inline-block">Audited under SOE Law No. 19/2003</span>
+</div>
+</div>
+<!-- Right Column: Visual Architectural Micro-Card & High-Level Footprint -->
+<div class="lg:col-span-4 flex flex-col space-y-4">
+<div class="p-8 rounded-[28px] bg-surface-container-low shadow-sm relative overflow-hidden flex flex-col justify-between min-h-[360px]">
+<!-- Geometric Blueprint Trace Background -->
+<div class="absolute -right-12 -top-12 w-48 h-48 rounded-full bg-secondary-container/20 blur-2xl pointer-events-none"></div>
+<div class="space-y-4 relative z-10">
+<div class="flex items-center justify-between">
+<span class="text-xs font-semibold text-xs uppercase tracking-wider text-on-surface-variant">Sovereign Mandate Scope</span>
+<span class="material-symbols-outlined text-primary text-[22px]">corporate_fare</span>
+</div>
+<div class="text-base font-bold text-headline-sm text-primary tracking-tight">
+              SCBD Tower 48 &bull; Jakarta Financial District
+            </div>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+              Consolidated supervisory governance across strategic infrastructure, energy transition, defensive computation, and human capital architecture.
+            </p>
+</div>
+<div class="pt-6 relative z-10 space-y-3">
+<div class="flex justify-between items-center py-2.5 bg-surface-container-lowest px-4 rounded-xl shadow-xs">
+<span class="text-xs font-semibold text-xs text-on-surface-variant uppercase">Ecosystem Tier</span>
+<span class="text-sm font-semibold text-sm text-primary font-bold">Consolidated Group (Tbk)</span>
+</div>
+<div class="flex justify-between items-center py-2.5 bg-surface-container-lowest px-4 rounded-xl shadow-xs">
+<span class="text-xs font-semibold text-xs text-on-surface-variant uppercase">Oversight Alignment</span>
+<span class="text-sm font-semibold text-sm text-secondary font-bold">Kementerian BUMN &amp; OJK</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Key Value Metrics Ribbon -->
+<div class="grid grid-cols-2 md:grid-cols-4 gap-4 mt-12 pt-8">
+<div class="p-6 rounded-2xl bg-surface-container-lowest shadow-sm flex flex-col justify-between">
+<span class="text-xs font-semibold text-xs uppercase tracking-wider text-on-surface-variant block mb-2">Subsidiary Units</span>
+<div class="text-3xl sm:text-4xl font-extrabold text-headline-xl text-primary font-bold tracking-tight">04</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Autonomous operating entities</p>
+</div>
+<div class="p-6 rounded-2xl bg-surface-container-lowest shadow-sm flex flex-col justify-between">
+<span class="text-xs font-semibold text-xs uppercase tracking-wider text-on-surface-variant block mb-2">Advisory Exposure</span>
+<div class="text-3xl sm:text-4xl font-extrabold text-headline-xl text-primary font-bold tracking-tight">Rp 120T<span class="text-secondary text-headline-lg">+</span></div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Sovereign &amp; conglomerate assets</p>
+</div>
+<div class="p-6 rounded-2xl bg-surface-container-lowest shadow-sm flex flex-col justify-between">
+<span class="text-xs font-semibold text-xs uppercase tracking-wider text-on-surface-variant block mb-2">Compliance Rigor</span>
+<div class="text-3xl sm:text-4xl font-extrabold text-headline-xl text-primary font-bold tracking-tight">100%</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">BUMN, OJK &amp; KPK Aligned</p>
+</div>
+<div class="p-6 rounded-2xl bg-surface-container-lowest shadow-sm flex flex-col justify-between">
+<span class="text-xs font-semibold text-xs uppercase tracking-wider text-on-surface-variant block mb-2">Command Center</span>
+<div class="text-3xl sm:text-4xl font-extrabold text-headline-xl text-primary font-bold tracking-tight">Lvl 48</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">SCBD Sovereign Headquarters</p>
+</div>
+</div>
+</section>
+<!-- INTERACTIVE ECOSYSTEM ARCHITECTURE: 4 SPECIALIZED SUBSIDIARIES (BENTO MATRIX) -->
+<section class="scroll-reveal max-w-[1440px] mx-auto w-full px-4 sm:px-6 lg:px-12 py-16 scroll-mt-28" id="ecosystem-matrix">
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12">
+<div class="space-y-3 max-w-2xl">
+<div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-surface-container-high">
+<span class="text-xs font-semibold text-xs tracking-widest uppercase text-on-surface-variant font-bold">Ecosystem Operating Entities</span>
+</div>
+<h2 class="text-3xl sm:text-4xl font-extrabold text-headline-xl text-primary tracking-tight">
+          Empat Pilar Spesialis dalam Satu Ekosistem Terpadu
+        </h2>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-md">
+        Each entity functions as an institutional-grade domain authority, deploying sovereign protocols across Southeast Asian market transformations.
+      </p>
+</div>
+<!-- 4-Card Bento Grid Layout -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-6">
+<!-- ENTITY 1: Nara Strategic Advisory (Luminous Light Card - 7 cols) -->
+<div class="lg:col-span-7 bg-surface-container-lowest rounded-[28px] p-8 sm:p-10 shadow-sm flex flex-col justify-between group hover:shadow-md transition-all">
+<div class="space-y-6">
+<div class="flex items-center justify-between flex-wrap gap-3">
+<div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-surface-container text-primary text-xs font-semibold text-xs tracking-wider uppercase font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+              Corporate Strategy &amp; GRC
+            </div>
+<span class="text-xs font-semibold text-xs text-on-surface-variant tracking-widest font-mono">EST. 2011 &bull; ENTITY 01</span>
+</div>
+<div class="space-y-2">
+<h3 class="text-2xl sm:text-3xl font-extrabold text-headline-lg text-primary tracking-tight group-hover:text-secondary transition-colors">
+              Nara Strategic Advisory
+            </h3>
+<p class="font-title-md text-title-md text-on-surface font-medium">
+              Holding Restructuring, Cross-Border M&amp;A, &amp; Fiduciary Defense
+            </p>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+            Advising boards of directors and state commissioners on complex corporate balance sheet restructuring, sovereign capital allocation, KPK anti-bribery protocols, and multi-jurisdictional transaction due diligence.
+          </p>
+<!-- Focus Pillars / Chips -->
+<div class="flex flex-wrap gap-2 pt-2">
+<span class="px-3 py-1 rounded-full bg-surface-container-low text-on-surface-variant text-xs font-semibold text-xs">Capital Allocation Models</span>
+<span class="px-3 py-1 rounded-full bg-surface-container-low text-on-surface-variant text-xs font-semibold text-xs">Board Fiduciary Safeguards</span>
+<span class="px-3 py-1 rounded-full bg-surface-container-low text-on-surface-variant text-xs font-semibold text-xs">SOE Consolidation Roadmaps</span>
+</div>
+</div>
+<div class="pt-8 mt-6 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+<div class="flex items-center gap-3">
+<div class="px-3 py-1 rounded-full bg-surface-container-high text-primary text-xs font-semibold text-xs font-semibold">OJK Regulated Partner</div>
+<div class="px-3 py-1 rounded-full bg-surface-container-high text-primary text-xs font-semibold text-xs font-semibold">ISO 37001 ABMS</div>
+</div>
+<a class="h-11 px-5 rounded-full bg-surface-container text-primary hover:bg-primary hover:text-on-primary text-sm font-semibold text-sm inline-flex items-center gap-2 transition-all" href="index.html">
+<span>Explore Strategic Advisory Gateway</span>
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</a>
+</div>
+</div>
+<!-- ENTITY 2: Nara Sentinel Digital &amp; AI (Executive Dark Obsidian Card - 5 cols) -->
+<div class="lg:col-span-5 bg-primary-container text-on-primary rounded-[28px] p-8 sm:p-10 shadow-md flex flex-col justify-between relative overflow-hidden group">
+<!-- Ambient Decorative Glow -->
+<div class="absolute -right-16 -bottom-16 w-56 h-56 bg-secondary-fixed-dim/10 rounded-full blur-3xl pointer-events-none"></div>
+<div class="space-y-6 relative z-10">
+<div class="flex items-center justify-between flex-wrap gap-3">
+<div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-secondary-container/15 text-secondary-fixed text-xs font-semibold text-xs tracking-wider uppercase font-bold">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary-fixed animate-ping"></span>
+              Cyber Defense &amp; Sovereign Cloud
+            </div>
+<span class="text-xs font-semibold text-xs text-on-primary-container tracking-widest font-mono">TIER 4 &bull; ENTITY 02</span>
+</div>
+<div class="space-y-2">
+<h3 class="text-2xl sm:text-3xl font-extrabold text-headline-lg text-on-primary tracking-tight">
+              Nara Sentinel Digital &amp; AI
+            </h3>
+<p class="font-title-md text-title-md text-secondary-fixed font-medium">
+              Air-Gapped Sovereign Data Enclaves &amp; 24/7 SOC
+            </p>
+</div>
+<p class="font-body-md text-body-md text-on-primary-container leading-relaxed">
+            Continuous threat simulation, automated zero-day containment, and hardware-secured sovereign cloud mesh for national banking networks, energy grids, and government telecommunications.
+          </p>
+<div class="flex flex-wrap gap-2 pt-2">
+<span class="px-3 py-1 rounded-full bg-surface-tint/20 text-tertiary-fixed text-xs font-semibold text-xs">Post-Quantum Cryptography</span>
+<span class="px-3 py-1 rounded-full bg-surface-tint/20 text-tertiary-fixed text-xs font-semibold text-xs">BSSN Level 4 Readiness</span>
+</div>
+</div>
+<div class="pt-8 mt-6 relative z-10 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+<div class="flex items-center gap-2 flex-wrap">
+<span class="px-2.5 py-1 rounded-full bg-surface-tint/30 text-secondary-fixed text-xs font-semibold text-xs">Tier 4 SOC</span>
+<span class="px-2.5 py-1 rounded-full bg-surface-tint/30 text-tertiary-fixed text-xs font-semibold text-xs">ISO 27001:2022</span>
+</div>
+<a class="h-11 px-5 rounded-full bg-secondary-container text-on-secondary-fixed hover:bg-[#d5e44a] text-sm font-semibold text-sm inline-flex items-center gap-2 transition-all font-semibold shadow-sm" href="index.html">
+<span>Enter Sentinel SOC Portal</span>
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</a>
+</div>
+</div>
+<!-- ENTITY 3: Nara SafeGuard QHSE &amp; K3 (Luminous Bento Card - 5 cols) -->
+<div class="lg:col-span-5 bg-surface-container-lowest rounded-[28px] p-8 sm:p-10 shadow-sm flex flex-col justify-between group hover:shadow-md transition-all">
+<div class="space-y-6">
+<div class="flex items-center justify-between flex-wrap gap-3">
+<div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-surface-container text-primary text-xs font-semibold text-xs tracking-wider uppercase font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+              QHSE &amp; Industrial Resilience
+            </div>
+<span class="text-xs font-semibold text-xs text-on-surface-variant tracking-widest font-mono">SMK3 &bull; ENTITY 03</span>
+</div>
+<div class="space-y-2">
+<h3 class="text-2xl sm:text-3xl font-extrabold text-headline-lg text-primary tracking-tight group-hover:text-secondary transition-colors">
+              Nara SafeGuard QHSE &amp; K3
+            </h3>
+<p class="font-title-md text-title-md text-on-surface font-medium">
+              Turnkey Occupational Safety (K3), Environmental Auditing &amp; CSMS
+            </p>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+            Official Kemnaker inspection alignment, high-hazard site process safety management (PSM), and verified Net-Zero Scope 1-3 greenhouse gas verification for deep natural resource complexes.
+          </p>
+<div class="flex flex-wrap gap-2 pt-2">
+<span class="px-3 py-1 rounded-full bg-surface-container-low text-on-surface-variant text-xs font-semibold text-xs">Process Hazard Analysis (HAZOP)</span>
+<span class="px-3 py-1 rounded-full bg-surface-container-low text-on-surface-variant text-xs font-semibold text-xs">Contractor Safety (CSMS)</span>
+</div>
+</div>
+<div class="pt-8 mt-6 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+<div class="flex items-center gap-2 flex-wrap">
+<span class="px-2.5 py-1 rounded-full bg-surface-container-high text-primary text-xs font-semibold text-xs font-semibold">SMK3 Kemnaker</span>
+<span class="px-2.5 py-1 rounded-full bg-surface-container-high text-primary text-xs font-semibold text-xs font-semibold">ISO 45001 &amp; 14001</span>
+</div>
+<a class="h-11 px-5 rounded-full bg-surface-container text-primary hover:bg-primary hover:text-on-primary text-sm font-semibold text-sm inline-flex items-center gap-2 transition-all" href="index.html">
+<span>Explore SafeGuard Portal</span>
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</a>
+</div>
+</div>
+<!-- ENTITY 4: Nara Academy &amp; Human Capital (Luminous Bento Card - 7 cols) -->
+<div class="lg:col-span-7 bg-surface-container-lowest rounded-[28px] p-8 sm:p-10 shadow-sm flex flex-col justify-between group hover:shadow-md transition-all">
+<div class="space-y-6">
+<div class="flex items-center justify-between flex-wrap gap-3">
+<div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-surface-container text-primary text-xs font-semibold text-xs tracking-wider uppercase font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+              Human Capital &amp; Directorial Academy
+            </div>
+<span class="text-xs font-semibold text-xs text-on-surface-variant tracking-widest font-mono">BUMN POOL &bull; ENTITY 04</span>
+</div>
+<div class="space-y-2">
+<h3 class="text-2xl sm:text-3xl font-extrabold text-headline-lg text-primary tracking-tight group-hover:text-secondary transition-colors">
+              Nara Academy &amp; Human Capital
+            </h3>
+<p class="font-title-md text-title-md text-on-surface font-medium">
+              Executive Competency Matrix, Directorial Succession &amp; Leadership
+            </p>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+            Institutional 360-degree fiduciary competency diagnostics, sovereign talent pipeline pooling, and boardroom succession architecture configured for rapid deployment across critical state assets.
+          </p>
+<div class="flex flex-wrap gap-2 pt-2">
+<span class="px-3 py-1 rounded-full bg-surface-container-low text-on-surface-variant text-xs font-semibold text-xs">Director Readiness Index (DRI)</span>
+<span class="px-3 py-1 rounded-full bg-surface-container-low text-on-surface-variant text-xs font-semibold text-xs">Fiduciary Ethics Certification</span>
+<span class="px-3 py-1 rounded-full bg-surface-container-low text-on-surface-variant text-xs font-semibold text-xs">C-Suite Transition Audits</span>
+</div>
+</div>
+<div class="pt-8 mt-6 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+<div class="flex items-center gap-3">
+<span class="px-3 py-1 rounded-full bg-surface-container-high text-primary text-xs font-semibold text-xs font-semibold">KBUMN Talent Benchmark</span>
+<span class="px-3 py-1 rounded-full bg-surface-container-high text-primary text-xs font-semibold text-xs font-semibold">Assessment Center Certified</span>
+</div>
+<a class="h-11 px-5 rounded-full bg-surface-container text-primary hover:bg-primary hover:text-on-primary text-sm font-semibold text-sm inline-flex items-center gap-2 transition-all" href="index.html">
+<span>Explore Talenta Gateway</span>
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</a>
+</div>
+</div>
+</div>
+</section>
+<!-- EXECUTIVE LEADERSHIP & BOARD OF GOVERNANCE SECTION -->
+<section class="scroll-reveal max-w-[1440px] mx-auto w-full px-4 sm:px-6 lg:px-12 py-16 scroll-mt-28" id="leadership-board">
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12">
+<div class="space-y-3 max-w-2xl">
+<div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-surface-container-high">
+<span class="text-xs font-semibold text-xs tracking-widest uppercase text-on-surface-variant font-bold">Executive Stewardship</span>
+</div>
+<h2 class="text-3xl sm:text-4xl font-extrabold text-headline-xl text-primary tracking-tight">
+          Dipimpin oleh Dewan Pakar &amp; Praktisi Senior Berpengalaman
+        </h2>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-md">
+        Our partners combine decades of leadership across national ministries, sovereign wealth funds, and international consultancies.
+      </p>
+</div>
+<!-- 3-Column Leadership Card Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+<!-- Leader 1: Raden Arya Pratama -->
+<div class="bg-surface-container-lowest rounded-[28px] p-6 shadow-sm flex flex-col justify-between group hover:shadow-md transition-all">
+<div class="space-y-5">
+<div class="w-full aspect-[3/4] overflow-hidden rounded-[20px] bg-surface-container relative">
+<img alt="Raden Arya Pratama, M.Sc." class="w-full h-full object-cover object-top grayscale contrast-110 group-hover:scale-[1.02] transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD2-7-bN-JteM1iX2rbBgrEvV-meUFha4LE-uavY3DglzX5zRHpkEf9j9ZH7eCprIQnVc68jysTzXmo-J1tWBM6vkDiZCsKiLY10a2850TAGJBZRa-YLTQTO2GQxz3fkdstxpOyjbmTIl4cLV2ChTpxR3Gns-ZyuEUcY8Oc8QJXn80_88MXw6hgHj7OEDkCn3c0Z1yZGTiowf5DPsqE1XLRDEv2D9jMxHDciqoiMsqKDYOLddr1hZUxFg"/>
+<div class="absolute bottom-3 left-3 bg-primary/80 backdrop-blur-md px-3 py-1 rounded-full text-on-primary text-xs font-semibold text-xs">
+              26+ Years Sovereign Advisory
+            </div>
+</div>
+<div class="space-y-1.5">
+<h3 class="font-title-md text-title-md text-primary font-bold">Raden Arya Pratama, M.Sc.</h3>
+<p class="text-sm font-semibold text-sm text-secondary font-semibold">Managing Partner &amp; Group Executive Chairman</p>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+            Former Senior Advisor to Ministry of SOEs (BUMN); 26+ years orchestrating holding restructuring, capital allocation, and sovereign fund governance across Southeast Asia.
+          </p>
+</div>
+<div class="pt-6 mt-4 space-y-4">
+<div class="flex flex-wrap gap-1.5">
+<span class="px-2.5 py-0.5 rounded-full bg-surface-container text-on-surface-variant text-xs font-semibold text-xs font-medium">Holding Governance</span>
+<span class="px-2.5 py-0.5 rounded-full bg-surface-container text-on-surface-variant text-xs font-semibold text-xs font-medium">M&amp;A Advisory</span>
+<span class="px-2.5 py-0.5 rounded-full bg-surface-container text-on-surface-variant text-xs font-semibold text-xs font-medium">BUMN Mandates</span>
+</div>
+<div class="flex items-center justify-between pt-2">
+<a class="text-sm font-semibold text-sm text-primary hover:text-secondary inline-flex items-center gap-1 transition-colors font-semibold" href="index.html">
+<span>View Mandate History</span>
+<span class="material-symbols-outlined text-[16px]">chevron_right</span>
+</a>
+<a aria-label="LinkedIn Profile" class="w-8 h-8 rounded-full bg-surface-container hover:bg-primary hover:text-on-primary flex items-center justify-center text-on-surface-variant transition-colors" href="index.html">
+<span class="font-bold text-[12px] font-mono">in</span>
+</a>
+</div>
+</div>
+</div>
+<!-- Leader 2: Dr. Maya Sastroamidjojo -->
+<div class="bg-surface-container-lowest rounded-[28px] p-6 shadow-sm flex flex-col justify-between group hover:shadow-md transition-all">
+<div class="space-y-5">
+<div class="w-full aspect-[3/4] overflow-hidden rounded-[20px] bg-surface-container relative">
+<img alt="Dr. Maya Sastroamidjojo" class="w-full h-full object-cover object-top grayscale contrast-110 group-hover:scale-[1.02] transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBDBRMciVL0AlmkwWEepXzw5YfuKgOkxMrFwbde4LElngRThzRaq316Mgdu832uuQ6_ksqYbZcfVricft-OXTrtAsUgjH2w7SnHCHhwZGEN1Vu2Zq8JUFZmgiIdYEoszo81Yyq1VLr8ZDxwt8_JjyOWIXbQOkETd_hAHbIuTHD2KI9XLfqwEaiK3lUQ33TbohFHI7eMkXVpDsR2o7X2waKpDrnsHo1ceBGyL1vZD57W-6P-wq5ErixDPg"/>
+<div class="absolute bottom-3 left-3 bg-primary/80 backdrop-blur-md px-3 py-1 rounded-full text-on-primary text-xs font-semibold text-xs">
+              ASEAN Banking Advisory Lead
+            </div>
+</div>
+<div class="space-y-1.5">
+<h3 class="font-title-md text-title-md text-primary font-bold">Dr. Maya Sastroamidjojo</h3>
+<p class="text-sm font-semibold text-sm text-secondary font-semibold">Partner, Head of GRC &amp; Institutional Integrity</p>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+            Former Compliance Director at ASEAN Banking Consortium; specialist in anti-bribery frameworks (ISO 37001), corporate whistleblowing systems, and board fiduciary liability.
+          </p>
+</div>
+<div class="pt-6 mt-4 space-y-4">
+<div class="flex flex-wrap gap-1.5">
+<span class="px-2.5 py-0.5 rounded-full bg-surface-container text-on-surface-variant text-xs font-semibold text-xs font-medium">GRC Strategy</span>
+<span class="px-2.5 py-0.5 rounded-full bg-surface-container text-on-surface-variant text-xs font-semibold text-xs font-medium">ISO 37001 ABMS</span>
+<span class="px-2.5 py-0.5 rounded-full bg-surface-container text-on-surface-variant text-xs font-semibold text-xs font-medium">Fiduciary Oversight</span>
+</div>
+<div class="flex items-center justify-between pt-2">
+<a class="text-sm font-semibold text-sm text-primary hover:text-secondary inline-flex items-center gap-1 transition-colors font-semibold" href="index.html">
+<span>View Mandate History</span>
+<span class="material-symbols-outlined text-[16px]">chevron_right</span>
+</a>
+<a aria-label="LinkedIn Profile" class="w-8 h-8 rounded-full bg-surface-container hover:bg-primary hover:text-on-primary flex items-center justify-center text-on-surface-variant transition-colors" href="index.html">
+<span class="font-bold text-[12px] font-mono">in</span>
+</a>
+</div>
+</div>
+</div>
+<!-- Leader 3: Bramantyo Wardhana, Ph.D. -->
+<div class="bg-surface-container-lowest rounded-[28px] p-6 shadow-sm flex flex-col justify-between group hover:shadow-md transition-all">
+<div class="space-y-5">
+<div class="w-full aspect-[3/4] overflow-hidden rounded-[20px] bg-surface-container relative">
+<img alt="Bramantyo Wardhana, Ph.D." class="w-full h-full object-cover object-top grayscale contrast-110 group-hover:scale-[1.02] transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAyRWSP_ObCPLxkkR16AmtCG-z4BDq1zjPfmYsOl2C7uR2BajRsC7bYllfV0XKbu5f-B-LSxlT_SUMJKk7Pty7mbgI_lNIiSFTFyhngNVsQJK31U435Zlj1QlyjD4rdOINSLI7l6XkDrOYmLphPH0W11huCEzrrBJnwGdyKrilZRFTZ4vq90zFsO1a5VUQFATiSmXxLtmKkhJeHbr7SeSwxY3B4kTkRS_dTgHBjd4XMo3p0OYRvBpUwbA"/>
+<div class="absolute bottom-3 left-3 bg-primary/80 backdrop-blur-md px-3 py-1 rounded-full text-on-primary text-xs font-semibold text-xs">
+              Sovereign Cyber Architect
+            </div>
+</div>
+<div class="space-y-1.5">
+<h3 class="font-title-md text-title-md text-primary font-bold">Bramantyo Wardhana, Ph.D.</h3>
+<p class="text-sm font-semibold text-sm text-secondary font-semibold">Chief Technology Advisor &amp; Head of Sovereign AI</p>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+            Ex-lead AI Infrastructure architect for national critical systems; pioneer in air-gapped on-premise neural models, cybersecurity defense, and confidential computing.
+          </p>
+</div>
+<div class="pt-6 mt-4 space-y-4">
+<div class="flex flex-wrap gap-1.5">
+<span class="px-2.5 py-0.5 rounded-full bg-surface-container text-on-surface-variant text-xs font-semibold text-xs font-medium">Sovereign AI</span>
+<span class="px-2.5 py-0.5 rounded-full bg-surface-container text-on-surface-variant text-xs font-semibold text-xs font-medium">Zero-Trust Arch</span>
+<span class="px-2.5 py-0.5 rounded-full bg-surface-container text-on-surface-variant text-xs font-semibold text-xs font-medium">ISO 27001</span>
+</div>
+<div class="flex items-center justify-between pt-2">
+<a class="text-sm font-semibold text-sm text-primary hover:text-secondary inline-flex items-center gap-1 transition-colors font-semibold" href="index.html">
+<span>View Mandate History</span>
+<span class="material-symbols-outlined text-[16px]">chevron_right</span>
+</a>
+<a aria-label="LinkedIn Profile" class="w-8 h-8 rounded-full bg-surface-container hover:bg-primary hover:text-on-primary flex items-center justify-center text-on-surface-variant transition-colors" href="index.html">
+<span class="font-bold text-[12px] font-mono">in</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- INSTITUTIONAL GOVERNANCE & STATUTORY CERTIFICATIONS BAR -->
+<section class="scroll-reveal max-w-[1440px] mx-auto w-full px-4 sm:px-6 lg:px-12 py-12">
+<div class="bg-primary-container text-on-primary rounded-[28px] p-8 sm:p-12 lg:p-16 shadow-xl relative overflow-hidden">
+<!-- Architectural Grid Background Pattern -->
+<div class="absolute inset-0 opacity-[0.04] pointer-events-none bg-[radial-gradient(#ffffff_1px,transparent_1px)] [background-size:24px_24px]"></div>
+<div class="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+<!-- Left Column: Covenant & Compliance Scope -->
+<div class="lg:col-span-6 space-y-6">
+<div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-secondary-container/15 text-secondary-fixed text-xs font-semibold text-xs tracking-wider uppercase font-bold">
+            Institutional Integrity Benchmark
+          </div>
+<h2 class="text-3xl sm:text-4xl font-extrabold text-headline-xl text-on-primary tracking-tight">
+            Statutory Compliance &amp; Fiduciary Transparency
+          </h2>
+<p class="font-body-lg text-body-lg text-on-primary-container leading-relaxed">
+            Every subsidiary within Nara Institute operates under non-negotiable governance covenants audited annually by independent international fiduciaries and registered state watchdogs.
+          </p>
+<div class="flex flex-wrap gap-2.5 pt-2">
+<span class="px-3.5 py-1.5 rounded-full bg-surface-tint/20 text-tertiary-fixed text-xs font-semibold text-xs font-semibold">
+              BUMN Law No. 19/2003 Compliant
+            </span>
+<span class="px-3.5 py-1.5 rounded-full bg-surface-tint/20 text-tertiary-fixed text-xs font-semibold text-xs font-semibold">
+              UU Pelindungan Data Pribadi (PDP) Verified
+            </span>
+<span class="px-3.5 py-1.5 rounded-full bg-surface-tint/20 text-tertiary-fixed text-xs font-semibold text-xs font-semibold">
+              UN Global Compact Signatory
+            </span>
+</div>
+<div class="pt-4 flex flex-wrap gap-4 items-center">
+<a class="h-12 px-6 rounded-full bg-secondary-container text-on-secondary-fixed text-sm font-semibold text-sm font-semibold inline-flex items-center gap-2 hover:bg-[#d5e44a] transition-all shadow-sm" href="index.html">
+<span class="material-symbols-outlined text-[20px]">download</span>
+<span>Download Governance &amp; Ethics Charter 2025 (PDF)</span>
+</a>
+<a class="h-12 px-6 rounded-full bg-surface-tint/20 text-tertiary-fixed text-sm font-semibold text-sm inline-flex items-center gap-2 hover:bg-surface-tint/30 transition-all" href="index.html">
+<span>Contact Secretariat</span>
+<span class="material-symbols-outlined text-[18px]">mail</span>
+</a>
+</div>
+</div>
+<!-- Right Column: Certification Matrix & Sovereign Badges -->
+<div class="lg:col-span-6">
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+<div class="p-6 rounded-2xl bg-surface-tint/10 flex flex-col justify-between space-y-4">
+<div class="flex items-center justify-between">
+<span class="text-base font-bold text-headline-sm text-secondary-fixed font-mono font-bold">01</span>
+<span class="material-symbols-outlined text-secondary-fixed text-[24px]">verified</span>
+</div>
+<div class="space-y-1">
+<div class="text-sm font-semibold text-sm text-on-primary font-bold">BSN &amp; Kemnaker RI</div>
+<p class="font-body-sm text-body-sm text-on-primary-container">Official statutory occupational accreditation and industrial hazard oversight licenses.</p>
+</div>
+</div>
+<div class="p-6 rounded-2xl bg-surface-tint/10 flex flex-col justify-between space-y-4">
+<div class="flex items-center justify-between">
+<span class="text-base font-bold text-headline-sm text-secondary-fixed font-mono font-bold">02</span>
+<span class="material-symbols-outlined text-secondary-fixed text-[24px]">security</span>
+</div>
+<div class="space-y-1">
+<div class="text-sm font-semibold text-sm text-on-primary font-bold">ISO 37001 (ABMS)</div>
+<p class="font-body-sm text-body-sm text-on-primary-container">Anti-Bribery Management System certified across all executive advisory interactions.</p>
+</div>
+</div>
+<div class="p-6 rounded-2xl bg-surface-tint/10 flex flex-col justify-between space-y-4">
+<div class="flex items-center justify-between">
+<span class="text-base font-bold text-headline-sm text-secondary-fixed font-mono font-bold">03</span>
+<span class="material-symbols-outlined text-secondary-fixed text-[24px]">lock</span>
+</div>
+<div class="space-y-1">
+<div class="text-sm font-semibold text-sm text-on-primary font-bold">ISO 27001:2022</div>
+<p class="font-body-sm text-body-sm text-on-primary-container">Information Security Management &amp; Tier-4 Security Operations Center certified.</p>
+</div>
+</div>
+<div class="p-6 rounded-2xl bg-surface-tint/10 flex flex-col justify-between space-y-4">
+<div class="flex items-center justify-between">
+<span class="text-base font-bold text-headline-sm text-secondary-fixed font-mono font-bold">04</span>
+<span class="material-symbols-outlined text-secondary-fixed text-[24px]">shield</span>
+</div>
+<div class="space-y-1">
+<div class="text-sm font-semibold text-sm text-on-primary font-bold">OJK &amp; SMK3 Regulated</div>
+<p class="font-body-sm text-body-sm text-on-primary-container">Rigorous supervisory adherence for strategic capital and operational risk management.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+</div></main>
+<!-- CORPORATE MODERN FOOTER -->
+<!-- CORPORATE MULTI-OFFICE FOOTER -->
+<footer class="w-full bg-[#0B0D0C] text-white pt-16 pb-12 border-t border-white/10 mt-16">
+  <div class="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-12 space-y-12">
+    
+    <!-- Top Footer: Brand & Offices Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 pb-12 border-b border-white/10">
+      
+      <!-- Brand & Mission -->
+      <div class="lg:col-span-2 space-y-4">
+        <div class="flex items-center gap-3.5">
+          <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-[#9E1B22] to-[#D8E94B] p-0.5 flex items-center justify-center">
+            <div class="w-full h-full bg-[#0B0D0C] rounded-[10px] flex items-center justify-center">
+              <span class="font-extrabold text-sm text-white tracking-tighter">NI</span>
+            </div>
+          </div>
+          <div class="flex flex-col">
+            <span class="font-extrabold text-white tracking-wider text-base leading-none">NARA</span>
+            <span class="text-[#D8E94B] text-[10px] tracking-widest leading-none mt-1 uppercase font-bold">INSTITUTE</span>
+          </div>
+        </div>
+        <p class="text-xs text-white/60 leading-relaxed max-w-sm">
+          Lembaga rujukan nasional dalam konsultasi strategi bisnis, tata kelola risiko GRC, sertifikasi sistem manajemen mutu/K3, dan pengembangan human capital berdaya saing global.
+        </p>
+        <div class="flex items-center gap-3 text-white/50 pt-2">
+          <a class="w-8 h-8 rounded-full bg-white/5 hover:bg-white/15 flex items-center justify-center text-white transition-colors" href="https://linkedin.com" target="_blank" aria-label="LinkedIn">
+            <span class="material-symbols-outlined text-[16px]">public</span>
+          </a>
+          <a class="w-8 h-8 rounded-full bg-white/5 hover:bg-white/15 flex items-center justify-center text-white transition-colors" href="https://youtube.com" target="_blank" aria-label="YouTube">
+            <span class="material-symbols-outlined text-[16px]">smart_display</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Office 1: Head Office -->
+      <div class="space-y-2">
+        <span class="text-[11px] font-bold text-[#D8E94B] uppercase tracking-wider block">Headquarters (HQ)</span>
+        <p class="text-xs text-white/70 leading-relaxed">
+          Gedung Permata Kuningan Lt. 17<br/>
+          Jl. Kuningan Mulia, Setiabudi<br/>
+          Jakarta Selatan, 12920
+        </p>
+        <p class="text-xs text-white/50 pt-1">P: (021) 5088-9000<br/>E: corporate@nara-institute.id</p>
+      </div>
+
+      <!-- Office 2: Learning Center / Academy -->
+      <div class="space-y-2">
+        <span class="text-[11px] font-bold text-[#D8E94B] uppercase tracking-wider block">Nara Academy Center</span>
+        <p class="text-xs text-white/70 leading-relaxed">
+          The Hive Office Park Lt. 2<br/>
+          Jl. DI Panjaitan Kav. 2, Cawang<br/>
+          Jakarta Timur, 13340
+        </p>
+        <p class="text-xs text-white/50 pt-1">P: +62 811-1028-351<br/>E: academy@nara-institute.id</p>
+      </div>
+
+      <!-- Office 3: Regional Office -->
+      <div class="space-y-2">
+        <span class="text-[11px] font-bold text-[#D8E94B] uppercase tracking-wider block">Regional Surabaya</span>
+        <p class="text-xs text-white/70 leading-relaxed">
+          AMG Tower Lt. 17<br/>
+          Jl. Dukuh Menanggal No. 1A<br/>
+          Surabaya, Jawa Timur, 60234
+        </p>
+        <p class="text-xs text-white/50 pt-1">P: (031) 825-1700<br/>E: east@nara-institute.id</p>
+      </div>
+
+    </div>
+
+    <!-- Bottom Tagline & Copyright -->
+    <div class="flex flex-col md:flex-row items-center justify-between gap-6 pt-4 text-xs text-white/50">
+      <div class="flex flex-col items-center md:items-start">
+        <span class="text-white font-extrabold text-sm tracking-wide">Fueled by Knowledge. Powered by Ideas.</span>
+        <span class="text-[11px] text-white/40 mt-0.5">© 2026 PT Nara Solusi Korporat / Nara Institute. All rights reserved.</span>
+      </div>
+      <div class="flex items-center gap-6">
+        <a class="hover:text-white transition-colors" href="about.html">Tentang Kami</a>
+        <a class="hover:text-white transition-colors" href="solutions.html">Katalog Solusi</a>
+        <a class="hover:text-white transition-colors" href="contact.html">Pusat Bantuan</a>
+        <a class="hover:text-white transition-colors" href="privacy.html">Kebijakan Privasi</a>
+      </div>
+    </div>
+
+  </div>
+</footer>
+</body></html>
