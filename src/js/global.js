@@ -27,8 +27,8 @@ function initMobileDrawer() {
     mobileBtn = document.createElement('button');
     mobileBtn.id = 'mobile-menu-btn';
     mobileBtn.setAttribute('aria-label', 'Toggle mobile navigation menu');
-    mobileBtn.className = 'xl:hidden w-10 h-10 rounded-full bg-white/10 hover:bg-white/20 text-white flex items-center justify-center transition-all ml-2 shadow-sm focus:outline-none';
-    mobileBtn.innerHTML = '<span class="material-symbols-outlined text-[22px]">menu</span>';
+    mobileBtn.className = 'xl:hidden w-9 h-9 rounded-full bg-black/5 hover:bg-black/10 text-[#0B0D0C] flex items-center justify-center transition-all ml-1 sm:ml-2 shadow-sm focus:outline-none';
+    mobileBtn.innerHTML = '<span class="material-symbols-outlined text-[20px]">menu</span>';
     navContainer.appendChild(mobileBtn);
   }
 
@@ -42,15 +42,7 @@ function initMobileDrawer() {
         <div>
           <div class="flex items-center justify-between pb-6 border-b border-white/10">
             <div class="flex items-center gap-3">
-              <div class="w-9 h-9 rounded-xl bg-gradient-to-tr from-[#9E1B22] to-[#D8E94B] p-0.5 flex items-center justify-center shadow-lg">
-                <div class="w-full h-full bg-[#0E110F] rounded-[10px] flex items-center justify-center">
-                  <span class="font-black text-xs text-white tracking-tighter">NI</span>
-                </div>
-              </div>
-              <div class="flex flex-col">
-                <span class="font-extrabold text-white tracking-wider text-sm leading-none">NARA</span>
-                <span class="text-[#D8E94B] text-[9px] tracking-widest leading-none mt-1 uppercase font-bold">INSTITUTE</span>
-              </div>
+              <img src="assets/images/logo.png" alt="Nara Institute" class="h-8 w-auto" />
             </div>
             <button id="close-drawer-btn" class="w-9 h-9 rounded-full bg-white/10 hover:bg-white/20 text-white flex items-center justify-center transition-colors focus:outline-none">
               <span class="material-symbols-outlined text-[20px]">close</span>
@@ -127,7 +119,7 @@ function initMobileDrawer() {
 
 // 2. Highlight Active Navigation Link
 function highlightActiveNav() {
-  const path = window.location.pathname;
+  const path = window.location.pathname.toLowerCase();
   let currentPage = 'index';
   if (path.includes('solutions')) currentPage = 'solutions';
   else if (path.includes('about')) currentPage = 'about';
@@ -136,17 +128,23 @@ function highlightActiveNav() {
 
   const desktopLinks = document.querySelectorAll('header nav a');
   desktopLinks.forEach(link => {
-    const href = link.getAttribute('href') || '';
-    if (
-      (currentPage === 'index' && (href === 'index.html' || href === '/' || href.includes('index'))) ||
+    const href = (link.getAttribute('href') || '').toLowerCase();
+    const isActive = (
+      (currentPage === 'index' && (href === 'index.html' || href === '/' || href.includes('index') || href === '')) ||
       (currentPage === 'solutions' && href.includes('solutions')) ||
       (currentPage === 'about' && href.includes('about')) ||
       (currentPage === 'insights' && href.includes('insights')) ||
       (currentPage === 'contact' && href.includes('contact'))
-    ) {
-      link.classList.remove('text-white/70');
-      link.classList.add('text-white', 'font-bold', 'border-b-2', 'border-[#9E1B22]', 'pb-1');
+    );
+
+    if (isActive) {
+      link.classList.remove('text-white', 'text-white/70', 'text-[#0B0D0C]/70');
+      link.classList.add('text-[#0B0D0C]', 'font-bold', 'border-b-2', 'border-[#9E1B22]', 'pb-1');
       link.setAttribute('aria-current', 'page');
+    } else {
+      link.classList.remove('text-white', 'font-bold', 'border-b-2', 'border-[#9E1B22]', 'pb-1');
+      link.classList.add('text-[#0B0D0C]/70', 'font-semibold');
+      link.removeAttribute('aria-current');
     }
   });
 
@@ -155,6 +153,9 @@ function highlightActiveNav() {
     if (link.getAttribute('data-page') === currentPage) {
       link.classList.remove('text-white/80');
       link.classList.add('text-[#D8E94B]', 'bg-white/10', 'font-bold');
+    } else {
+      link.classList.remove('text-[#D8E94B]', 'bg-white/10', 'font-bold');
+      link.classList.add('text-white/80');
     }
   });
 }
@@ -340,98 +341,98 @@ function initPillarEngine() {
   const pillarData = {
     '01': {
       number: '01',
-      title: 'Spirit & Leadership Integrity',
-      subtitle: 'Komitmen Budaya, Nilai Moral & Integritas Kepemimpinan',
-      tag: 'Nilai Inti Nara',
-      principles: '5 Prinsip Utama',
-      description: 'Fondasi paling esensial dalam seluruh layanan Nara Institute. Menanamkan nilai-nilai luhur kepemimpinan beretika, akuntabilitas moral, dan komitmen profesional yang kokoh bagi seluruh insan organisasi.',
+      title: 'Diagnosis & Assessment',
+      subtitle: 'NARA People Health Check™ Khusus CEO',
+      tag: 'People Health Check',
+      principles: 'Fase 1',
+      description: 'Fase diagnosis mendalam layaknya "Medical Check-Up" untuk organisasi Anda. Kami menganalisis akar masalah, bottlenecks, dan gap performa SDM di perusahaan yang sedang tumbuh pesat.',
       bullets: [
-        'Integritas tanpa kompromi dalam setiap audit dan rekomendasi',
-        'Kepemimpinan berbasis empati, resiliensi, dan visi jangka panjang',
-        'Penyelarasan budaya kerja korporat dengan nilai-nilai kemanusiaan',
-        'Transparansi tata kelola yang memancarkan otoritas moral'
+        'Audit komprehensif struktur organisasi & beban kerja',
+        'Identifikasi gap kompetensi talenta vs strategi bisnis',
+        'Evaluasi kesehatan budaya kerja & tingkat retensi',
+        'Rekomendasi "Prescription" strategis kepada Business Owner'
       ],
-      deliverables: 'Executive Leadership Blueprint, Code of Conduct Transformation, Cultural Alignment Assessment',
-      icon: 'favorite'
+      deliverables: 'Organization Health Report, Talent Gap Analysis, Strategic Prescription Blueprint',
+      icon: 'health_and_safety'
     },
     '02': {
       number: '02',
-      title: 'Structure & Enterprise Governance',
-      subtitle: 'Tata Kelola Adaptif, GRC & Model Bisnis Berkelanjutan',
-      tag: 'Tata Kelola GRC',
-      principles: '6 Prinsip Utama',
-      description: 'Menata arsitektur organisasi dan model bisnis holding agar memiliki daya adaptasi tinggi, terhindar dari benturan kepentingan, serta memiliki sistem mitigasi risiko (GRC) yang teruji di kancah internasional.',
+      title: 'Talent Treatment & Partnership',
+      subtitle: 'NARA People Care™ - Solusi Terpadu Merawat SDM',
+      tag: 'Talent Treatment',
+      principles: 'Fase 2',
+      description: 'Solusi pendampingan (partnership) jangka panjang dari "Corporate People Doctor". Kami tidak hanya memberikan training, kami memastikan tim Anda benar-benar sehat dan siap mengeksekusi strategi.',
       bullets: [
-        'Desain struktur organisasi yang lincah (agile) dan minim birokrasi',
-        'Penerapan framework GRC (Governance, Risk, and Compliance) terpadu',
-        'Pemisahan wewenang yang tegas antara Dewan Komisaris dan Direksi',
-        'Manajemen kepatuhan regulasi sektoral & pencegahan fraud korporasi'
+        'Pendampingan intensif oleh pakar HR tersertifikasi',
+        'Konsultasi "One-on-One" bagi eksekutif dan manager',
+        'Program penyehatan budaya kerja & peningkatan employee engagement',
+        'Sistem evaluasi kinerja dan produktivitas terukur'
       ],
-      deliverables: 'Corporate Governance Charter, Enterprise Risk Management (ERM) Framework, Board Effectiveness Review',
-      icon: 'account_tree'
+      deliverables: 'Employee Engagement Report, Performance Dashboard, NARA People Care Retainer',
+      icon: 'volunteer_activism'
     },
     '03': {
       number: '03',
-      title: 'Strategy & Market Leadership',
-      subtitle: 'Arah Pertumbuhan Strategis, Portofolio & Keunggulan Kompetitif',
-      tag: 'Penasihat Strategis',
-      principles: '6 Prinsip Utama',
-      description: 'Memandu korporasi dan institusi dalam merumuskan arah masa depan yang jelas, berani, dan berbasis data mendalam. Mengubah ancaman disrupsi pasar menjadi peluang ekspansi dan kepemimpinan industri.',
+      title: 'Professional Development',
+      subtitle: 'Pengembangan Kompetensi Eksekutif (Run the Business)',
+      tag: 'Run The Business',
+      principles: 'Fase 3',
+      description: 'Program pengembangan kapasitas manajerial tingkat lanjut (HR Pilar) untuk mencetak para pemimpin perusahaan yang mampu mengeksekusi strategi bisnis dengan presisi tinggi.',
       bullets: [
-        'Penyusunan Rencana Jangka Panjang Perusahaan (RJPP) berdaya eksekusi',
-        'Optimasi portofolio bisnis dan strategi sinergi holding-anak usaha',
-        'Analisis intelijen pasar B2B dan diferensiasi nilai proposisi',
-        'Roadmap transformasi bisnis berkelanjutan berorientasi ESG'
+        'Asesmen kompetensi kepemimpinan dan manajerial',
+        'Sertifikasi profesi & pelatihan berbasis kompetensi (BNSP)',
+        'Workshop in-house tematik (Leadership, Sales, Finance for Non-Finance)',
+        'Pembuatan modul pembelajaran korporat spesifik'
       ],
-      deliverables: 'Strategic Business Masterplan, Holding Synergy Blueprint, Market Expansion Feasibility Study',
-      icon: 'chess'
+      deliverables: 'Talent Mapping Matrix, Certified Leadership Program, Corporate Learning Modules',
+      icon: 'model_training'
     },
     '04': {
       number: '04',
-      title: 'Process & Operational Excellence',
-      subtitle: 'Standarisasi Sistem, Lean Management & Audit Mutu ISO',
-      tag: 'Keunggulan Operasional',
-      principles: '7 Prinsip Utama',
-      description: 'Mengikis inefisiensi, memangkas biaya tersembunyi, dan menegakkan standardisasi mutu internasional. Memastikan seluruh roda operasional berputar dengan kepastian kualitas tertinggi.',
+      title: 'Corporate Legal Compliance',
+      subtitle: 'Fondasi Kepatuhan Hukum Perusahaan (Protects the Business)',
+      tag: 'Legal Compliance',
+      principles: 'Fase 4',
+      description: 'Menjaga keberlangsungan bisnis dengan memastikan setiap langkah korporasi berpijak pada fondasi hukum (LAW Pilar) yang kuat dan terhindar dari sanksi.',
       bullets: [
-        'Implementasi Standardisasi Sistem ISO (9001, 14001, 45001, 27001, 37001)',
-        'Sistem Manajemen Keselamatan & Kesehatan Kerja (SMK3 / QHSE)',
-        'Business Process Re-engineering (BPR) dan otomasi alur kerja',
-        'Continuous improvement berbasis Lean Six Sigma & Audit Mutu Internal'
+        'Audit kepatuhan regulasi sektoral & perizinan bisnis (Legal Audit)',
+        'Penyusunan dan review kontrak komersial & kemitraan',
+        'Pembuatan Peraturan Perusahaan (PP) & Perjanjian Kerja Bersama (PKB)',
+        'Legal Due Diligence untuk merger, akuisisi, atau investasi'
       ],
-      deliverables: 'Integrated Management System (IMS), Standard Operating Procedures (SOP), ISO Certification Readiness Audit',
-      icon: 'settings_suggest'
+      deliverables: 'Corporate Legal Audit Report, Draft PKB/PP, Standardized Commercial Contracts',
+      icon: 'gavel'
     },
     '05': {
       number: '05',
-      title: 'People & Human Capital Development',
-      subtitle: 'Nara Academy: Asesmen Talenta, Sertifikasi & Learning Journey',
-      tag: 'Pusat Keunggulan SDM',
-      principles: '6 Prinsip Utama',
-      description: 'Menempatkan manusia sebagai aset paling berharga dalam era kecerdasan buatan. Mengembangkan potensi kepemimpinan, sertifikasi kompetensi profesi, dan kurikulum pelatihan korporat yang berdampak nyata.',
+      title: 'Business Dispute Mitigation',
+      subtitle: 'Strategi Manajemen Risiko Hukum & Sengketa',
+      tag: 'Risk Mitigation',
+      principles: 'Fase 5',
+      description: 'Pendekatan preventif dan strategis dalam menangani sengketa bisnis B2B atau ketenagakerjaan, melindungi aset kritis, kelangsungan operasi, dan reputasi perusahaan.',
       bullets: [
-        'Assessment Center & Talent Mapping berbasis kompetensi masa depan',
-        'Program pelatihan terstruktur in-house & sertifikasi BNSP terakreditasi',
-        'Sistem manajemen kinerja (KPI, OKR) dan retensi talenta kunci',
-        'Pengembangan kurikulum kepemimpinan eksekutif masa depan'
+        'Advokasi hukum ketenagakerjaan (PHI) dan sengketa industrial',
+        'Mediasi sengketa komersial B2B di luar pengadilan (ADR)',
+        'Strategi mitigasi risiko litigasi operasional harian',
+        'Pendampingan hukum eksekutif (Executive Legal Protection)'
       ],
-      deliverables: 'Corporate Academy Blueprint, Executive Assessment Reports, Talent Matrix & Succession Planning',
-      icon: 'groups'
+      deliverables: 'Dispute Resolution Strategy, Settlement Agreement, Legal Risk Heatmap',
+      icon: 'shield'
     },
     '06': {
       number: '06',
-      title: 'Technology & AI Enablement',
-      subtitle: 'Transformasi Digital, Keamanan Siber & Adopsi Solusi AI',
-      tag: 'Inovasi Digital',
-      principles: '3 Prinsip Utama',
-      description: 'Membimbing organisasi memanfaatkan kekuatan teknologi terkini dan Artificial Intelligence bukan sekadar tren, melainkan sebagai pendorong utama efisiensi biaya dan keunggulan kompetitif pasar.',
+      title: 'IT & Digital Acceleration',
+      subtitle: 'Transformasi Teknologi SDM (Accelerates the Business)',
+      tag: 'Tech Acceleration',
+      principles: 'Fase 6',
+      description: 'Mempercepat produktivitas SDM melalui otomasi teknologi (IT Pilar), pemanfaatan AI, serta penerapan standar keamanan siber tertinggi.',
       bullets: [
-        'Penyusunan IT Master Plan (ITMP) dan tata kelola keamanan siber',
-        'Implementasi Enterprise AI & otomasi analitik keputusan bisnis',
-        'Kepatuhan regulasi Pelindungan Data Pribadi (UU PDP / ISO 27701)',
-        'Modernisasi infrastruktur cloud enterprise yang resilien'
+        'Implementasi HRIS (Human Resource Information System) terpadu',
+        'Otomasi proses bisnis & adopsi Kecerdasan Buatan (AI)',
+        'Audit keamanan siber & tata kelola IT (ISO 27001)',
+        'Kepatuhan regulasi Pelindungan Data Pribadi (UU PDP)'
       ],
-      deliverables: 'Enterprise IT Master Plan, AI Governance Framework, Cybersecurity Maturity Assessment',
+      deliverables: 'HRIS Implementation Blueprint, IT Security Audit, Data Privacy Compliance Matrix',
       icon: 'memory'
     }
   };

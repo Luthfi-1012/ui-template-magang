@@ -68,43 +68,35 @@
 <body class="bg-[#0B0D0C] font-sans text-[#151917] antialiased selection:bg-[#9E1B22] selection:text-white">
 
 <!-- FLOATING HEADER / NAVBAR -->
-<header class="fixed top-0 inset-x-0 z-50 pt-4 px-4 sm:px-6 lg:px-12 pointer-events-none">
+<header class="fixed top-0 inset-x-0 z-50 pt-2.5 sm:pt-3 px-4 sm:px-6 lg:px-12 pointer-events-none">
   <div class="max-w-[1440px] mx-auto">
-    <div class="pointer-events-auto h-20 bg-[#0B0D0C]/90 backdrop-blur-xl border border-white/10 rounded-full px-6 lg:px-8 flex items-center justify-between shadow-[0_16px_36px_rgba(0,0,0,0.35)]">
+    <div class="pointer-events-auto h-16 bg-white/95 backdrop-blur-xl border border-black/5 rounded-full px-5 sm:px-6 lg:px-8 flex items-center justify-between shadow-[0_10px_30px_rgba(0,0,0,0.08)]">
       <!-- Logo -->
-      <a class="flex items-center gap-3.5 shrink-0 focus:outline-none group" href="index.html">
-        <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-[#9E1B22] via-[#C52631] to-[#D8E94B] p-0.5 flex items-center justify-center shadow-lg group-hover:scale-105 transition-transform">
-          <div class="w-full h-full bg-[#0B0D0C] rounded-[10px] flex items-center justify-center">
-            <span class="font-extrabold text-sm text-white tracking-tighter">NI</span>
-          </div>
-        </div>
-        <div class="flex flex-col">
-          <span class="font-extrabold text-white tracking-wider text-[15px] leading-none">NARA</span>
-          <span class="text-[#D8E94B] text-[9px] tracking-widest leading-none mt-1 uppercase font-bold">INSTITUTE</span>
-        </div>
+      <a class="flex items-center gap-3 shrink-0 focus:outline-none group" href="index.html">
+        <img src="assets/images/logo.png" alt="Nara Institute Logo" class="h-8 sm:h-8.5 w-auto group-hover:scale-105 transition-transform" />
       </a>
       
       <!-- Navigation Links -->
-      <nav class="hidden xl:flex items-center gap-8">
-        <a class="text-[13px] font-bold text-white border-b-2 border-[#9E1B22] pb-1 transition-colors" href="index.html" aria-current="page">Beranda</a>
-        <a class="text-[13px] font-semibold text-white/70 hover:text-white transition-colors" href="solutions.html">Solusi &amp; Layanan</a>
-        <a class="text-[13px] font-semibold text-white/70 hover:text-white transition-colors" href="about.html">Tentang Kami</a>
-        <a class="text-[13px] font-semibold text-white/70 hover:text-white transition-colors" href="insights.html">Pusat Wawasan</a>
-        <a class="text-[13px] font-semibold text-white/70 hover:text-white transition-colors" href="contact.html">Kontak &amp; RFQ</a>
+      <nav class="hidden xl:flex items-center gap-7 lg:gap-8">
+        <a class="text-[13px] font-bold text-[#0B0D0C] border-b-2 border-[#9E1B22] pb-1 transition-colors" href="index.html" aria-current="page">Beranda</a>
+        <a class="text-[13px] font-semibold text-[#0B0D0C]/70 hover:text-[#0B0D0C] transition-colors" href="solutions.html">Solusi &amp; Layanan</a>
+        <a class="text-[13px] font-semibold text-[#0B0D0C]/70 hover:text-[#0B0D0C] transition-colors" href="about.html">Tentang Kami</a>
+        <a class="text-[13px] font-semibold text-[#0B0D0C]/70 hover:text-[#0B0D0C] transition-colors" href="insights.html">Pusat Wawasan</a>
+        <a class="text-[13px] font-semibold text-[#0B0D0C]/70 hover:text-[#0B0D0C] transition-colors" href="contact.html">Kontak &amp; RFQ</a>
       </nav>
       
       <!-- Right CTA / Action -->
-      <div class="flex items-center gap-4">
-        <div class="hidden md:flex flex-col items-end border-r border-white/15 pr-4">
-          <span class="text-white/50 uppercase tracking-wider text-[9px] font-semibold">Hotline Eksekutif</span>
-          <a class="text-[13px] font-bold text-white tracking-tight hover:text-[#D8E94B] transition-colors flex items-center gap-1.5" href="https://wa.me/628111028351" target="_blank">
-            <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+      <div class="flex items-center gap-3 sm:gap-4">
+        <div class="hidden md:flex flex-col items-end border-r border-black/10 pr-3.5">
+          <span class="text-[#0B0D0C]/50 uppercase tracking-wider text-[8.5px] font-semibold">Hotline Eksekutif</span>
+          <a class="text-[12.5px] font-bold text-[#0B0D0C] tracking-tight hover:text-[#9E1B22] transition-colors flex items-center gap-1.5" href="https://wa.me/628111028351" target="_blank">
+            <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
             +62 811-1028-351
           </a>
         </div>
-        <a class="h-10 px-5 bg-gradient-to-r from-[#9E1B22] to-[#b8232c] hover:from-[#b8232c] hover:to-[#9E1B22] text-white text-[13px] font-bold rounded-full flex items-center justify-center gap-2 transition-all shadow-lg hover:shadow-red-900/40" href="contact.html">
+        <a class="h-9 px-4 sm:px-5 bg-gradient-to-r from-[#9E1B22] to-[#b8232c] hover:from-[#b8232c] hover:to-[#9E1B22] text-white text-[12.5px] font-bold rounded-full flex items-center justify-center gap-1.5 sm:gap-2 transition-all shadow-md hover:shadow-red-900/30" href="contact.html">
           <span>Konsultasi Kemitraan</span>
-          <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+          <span class="material-symbols-outlined text-[15px]">arrow_forward</span>
         </a>
       </div>
     </div>
@@ -129,34 +121,34 @@
 
       <!-- Hero Main Content (Center-Aligned Container) -->
       <div class="relative z-10 w-full max-w-[1440px] mx-auto px-6 sm:px-12 lg:px-20 my-auto flex flex-col justify-center">
-        <div class="max-w-4xl space-y-6 scroll-reveal">
+        <div class="max-w-5xl space-y-6 scroll-reveal">
           <!-- Overline Badge -->
           <div class="inline-flex items-center gap-2.5 px-4 py-2 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-white w-fit shadow-lg">
             <span class="w-2.5 h-2.5 rounded-full bg-[#D8E94B] animate-pulse"></span>
-            <span class="text-[11px] font-extrabold tracking-widest uppercase text-white/95">EKOSISTEM KONSULTASI STRATEGIS &amp; PENGEMBANGAN SDM</span>
+            <span class="text-[11px] font-extrabold tracking-widest uppercase text-white/95">NARA PEOPLE HEALTH SYSTEM™</span>
           </div>
 
           <!-- Hero Headline (Benchmark: Fueled by Knowledge Powered by Ideas) -->
-          <h1 class="text-4xl sm:text-6xl lg:text-7xl font-black text-white tracking-tight leading-[1.08]">
-            Fueled by <span class="text-transparent bg-clip-text bg-gradient-to-r from-white via-white/95 to-white/70">Knowledge.</span><br/>
-            Powered by <span class="text-transparent bg-clip-text bg-gradient-to-r from-[#D8E94B] via-[#c2e438] to-emerald-400">Strategic Ideas.</span>
+          <h1 class="text-[7vw] sm:text-5xl lg:text-6xl xl:text-[4.2rem] font-black text-white tracking-tight leading-[1.08] whitespace-nowrap">
+            Trusted People <span class="text-transparent bg-clip-text bg-gradient-to-r from-white via-white/95 to-white/70">Advisor.</span><br/>
+            Corporate People <span class="text-transparent bg-clip-text bg-gradient-to-r from-[#D8E94B] via-[#c2e438] to-emerald-400">Doctor.</span>
           </h1>
 
           <!-- Concise Subheadline -->
           <p class="text-lg sm:text-xl text-white/85 max-w-2xl font-normal leading-relaxed">
-            Pusat keunggulan terpadu: Layanan konsultasi strategi korporat, tata kelola risiko GRC, sertifikasi sistem manajemen ISO, transformasi digital AI, dan pengembangan human capital berdaya saing global.
+            Kami bukan vendor training biasa. Kami membantu CEO mengatasi ketertinggalan sistem SDM melalui diagnosis <strong>NARA People Health Check™</strong> dan partnership <strong>NARA People Care™</strong>.
           </p>
 
           <!-- Dual CTA Buttons -->
           <div class="pt-4 flex flex-wrap items-center gap-4">
             <a class="group inline-flex items-center gap-3.5 bg-[#D8E94B] hover:bg-[#c9da3d] text-[#0B0D0C] pl-7 pr-3.5 py-4 rounded-full font-extrabold text-[15px] shadow-[0_12px_28px_rgba(216,233,75,0.25)] transition-all duration-200 hover:shadow-2xl hover:scale-[1.02]" href="contact.html">
-              <span>Jadwalkan Konsultasi</span>
+              <span>Konsultasi CEO Sekarang</span>
               <span class="w-9 h-9 rounded-full bg-[#0B0D0C] text-white flex items-center justify-center transition-transform duration-300 group-hover:translate-x-1">
                 <span class="material-symbols-outlined text-[20px]">arrow_forward</span>
               </span>
             </a>
             <a class="inline-flex items-center justify-center px-7 py-4 rounded-full border border-white/30 hover:border-white text-white hover:bg-white/10 backdrop-blur-md font-bold text-[15px] transition-all duration-200" href="#capabilities">
-              <span>Jelajahi Ekosistem Solusi</span>
+              <span>Eksplorasi Solusi Bisnis</span>
             </a>
           </div>
 
@@ -236,13 +228,13 @@
         <div class="space-y-3">
           <div class="inline-flex items-center gap-2">
             <span class="w-5 h-px bg-[#9E1B22]"></span>
-            <span class="text-[11px] font-bold uppercase tracking-widest text-[#9E1B22]">EKOSISTEM SOLUSI NARA</span>
+            <span class="text-[11px] font-bold uppercase tracking-widest text-[#9E1B22]">PROFESSIONAL DEVELOPMENT &amp; BUSINESS SOLUTIONS</span>
           </div>
           <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#0B0D0C] tracking-tight">
-            Group of Knowledge
+            3 Pilar Utama NARA
           </h2>
           <p class="text-sm sm:text-base text-[#5A5E59] max-w-2xl font-normal leading-relaxed">
-            Menghubungkan keahlian multidisiplin untuk menjawab tantangan strategis, kepatuhan hukum, audit keselamatan kerja, hingga kesiapan kecerdasan buatan.
+            Menghubungkan keahlian multidisiplin untuk mendukung organisasi Anda: <strong>HR (Run the business)</strong>, <strong>LAW (Protects the business)</strong>, dan <strong>IT (Accelerates the business)</strong>.
           </p>
         </div>
         <a class="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-[#0B0D0C] hover:text-[#9E1B22] transition-colors group shrink-0" href="solutions.html">
@@ -254,28 +246,28 @@
       <!-- 3x3 Matrix Cards -->
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
         
-        <!-- Card 1: Business Strategy & Management Consulting -->
+        <!-- Card 1: NARA People Health Check -->
         <div class="interactive-card group relative h-[380px] rounded-3xl overflow-hidden shadow-lg border border-neutral-200/80 bg-[#0B0D0C]">
-          <img alt="Strategi & Manajemen Bisnis" class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105 opacity-65" src="assets/images/boardroom.png"/>
+          <img alt="NARA People Health Check" class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105 opacity-65" src="assets/images/boardroom.png"/>
           <div class="absolute inset-0 bg-gradient-to-t from-[#0B0D0C] via-[#0B0D0C]/40 to-transparent"></div>
           <div class="absolute inset-0 p-6 flex flex-col justify-between">
             <div class="flex items-center justify-between">
               <span class="px-3 py-1 rounded-full text-[10px] font-extrabold uppercase tracking-wider bg-[#0B0D0C]/80 text-[#D8E94B] border border-white/10 backdrop-blur-md">
-                PILAR 01
+                PILAR HR (PEOPLE)
               </span>
               <div class="w-8 h-8 rounded-full bg-white/10 backdrop-blur-md flex items-center justify-center text-white">
-                <span class="material-symbols-outlined text-[18px]">trending_up</span>
+                <span class="material-symbols-outlined text-[18px]">health_and_safety</span>
               </div>
             </div>
             <div class="space-y-2">
               <h3 class="text-xl font-bold text-white tracking-tight leading-snug">
-                Strategi &amp; Manajemen Bisnis
+                NARA People Health Check™
               </h3>
-              <p class="text-xs text-white/75 line-clamp-2 leading-relaxed">
-                Penyusunan RJPP, restrukturisasi korporasi, studi kelayakan investasi, dan evaluasi portofolio holding.
+              <p class="text-xs text-white/75 line-clamp-3 leading-relaxed">
+                Diagnosis mendalam sistem SDM khusus untuk CEO. Menemukan akar masalah dan gap performa organisasi Anda dengan akurasi klinis.
               </p>
               <div class="pt-2 flex items-center justify-between">
-                <a class="text-xs font-bold text-[#D8E94B] group-hover:underline flex items-center gap-1" href="solutions.html?pillar=strategy">
+                <a class="text-xs font-bold text-[#D8E94B] group-hover:underline flex items-center gap-1" href="solutions.html?pillar=hr">
                   <span>Pelajari Solusi</span>
                   <span class="material-symbols-outlined text-[14px]">arrow_forward</span>
                 </a>
@@ -284,28 +276,28 @@
           </div>
         </div>
 
-        <!-- Card 2: GRC, Audit & Kepatuhan -->
+        <!-- Card 2: NARA People Care -->
         <div class="interactive-card group relative h-[380px] rounded-3xl overflow-hidden shadow-lg border border-neutral-200/80 bg-[#0B0D0C]">
-          <img alt="Tata Kelola, Risiko & Kepatuhan" class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105 opacity-65" src="assets/images/atrium.png"/>
+          <img alt="NARA People Care" class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105 opacity-65" src="assets/images/atrium.png"/>
           <div class="absolute inset-0 bg-gradient-to-t from-[#0B0D0C] via-[#0B0D0C]/40 to-transparent"></div>
           <div class="absolute inset-0 p-6 flex flex-col justify-between">
             <div class="flex items-center justify-between">
               <span class="px-3 py-1 rounded-full text-[10px] font-extrabold uppercase tracking-wider bg-[#0B0D0C]/80 text-[#D8E94B] border border-white/10 backdrop-blur-md">
-                PILAR 02
+                PILAR HR (PEOPLE)
               </span>
               <div class="w-8 h-8 rounded-full bg-white/10 backdrop-blur-md flex items-center justify-center text-white">
-                <span class="material-symbols-outlined text-[18px]">account_balance</span>
+                <span class="material-symbols-outlined text-[18px]">volunteer_activism</span>
               </div>
             </div>
             <div class="space-y-2">
               <h3 class="text-xl font-bold text-white tracking-tight leading-snug">
-                Tata Kelola, Risiko &amp; Kepatuhan (GRC)
+                NARA People Care™
               </h3>
-              <p class="text-xs text-white/75 line-clamp-2 leading-relaxed">
-                Penerapan framework GRC terpadu, audit anti-fraud ISO 37001, dan kepatuhan regulasi OJK/BUMN.
+              <p class="text-xs text-white/75 line-clamp-3 leading-relaxed">
+                Partnership jangka panjang untuk merawat dan mengembangkan talenta kunci Anda. "We don't just train, we treat your people."
               </p>
               <div class="pt-2 flex items-center justify-between">
-                <a class="text-xs font-bold text-[#D8E94B] group-hover:underline flex items-center gap-1" href="solutions.html?pillar=grc">
+                <a class="text-xs font-bold text-[#D8E94B] group-hover:underline flex items-center gap-1" href="solutions.html?pillar=hr">
                   <span>Pelajari Solusi</span>
                   <span class="material-symbols-outlined text-[14px]">arrow_forward</span>
                 </a>
@@ -314,28 +306,28 @@
           </div>
         </div>
 
-        <!-- Card 3: QHSE & Keberlanjutan ESG -->
+        <!-- Card 3: Professional Development -->
         <div class="interactive-card group relative h-[380px] rounded-3xl overflow-hidden shadow-lg border border-neutral-200/80 bg-[#0B0D0C]">
-          <img alt="QHSE, K3 & Keberlanjutan ESG" class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105 opacity-65" src="assets/images/factory.png"/>
+          <img alt="Professional Development" class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105 opacity-65" src="assets/images/factory.png"/>
           <div class="absolute inset-0 bg-gradient-to-t from-[#0B0D0C] via-[#0B0D0C]/40 to-transparent"></div>
           <div class="absolute inset-0 p-6 flex flex-col justify-between">
             <div class="flex items-center justify-between">
               <span class="px-3 py-1 rounded-full text-[10px] font-extrabold uppercase tracking-wider bg-[#0B0D0C]/80 text-[#D8E94B] border border-white/10 backdrop-blur-md">
-                PILAR 03
+                PILAR HR (PEOPLE)
               </span>
               <div class="w-8 h-8 rounded-full bg-white/10 backdrop-blur-md flex items-center justify-center text-white">
-                <span class="material-symbols-outlined text-[18px]">eco</span>
+                <span class="material-symbols-outlined text-[18px]">model_training</span>
               </div>
             </div>
             <div class="space-y-2">
               <h3 class="text-xl font-bold text-white tracking-tight leading-snug">
-                Sistem Manajemen K3 &amp; ESG
+                Professional Development
               </h3>
-              <p class="text-xs text-white/75 line-clamp-2 leading-relaxed">
-                SMK3 Kemenaker, ISO 45001, audit keselamatan kerja industri, dan roadmap dekarbonisasi Net-Zero.
+              <p class="text-xs text-white/75 line-clamp-3 leading-relaxed">
+                Program pengembangan kepemimpinan dan kompetensi manajerial eksklusif untuk memastikan tim Anda siap mengeksekusi strategi bisnis (Run the Business).
               </p>
               <div class="pt-2 flex items-center justify-between">
-                <a class="text-xs font-bold text-[#D8E94B] group-hover:underline flex items-center gap-1" href="solutions.html?pillar=qhse">
+                <a class="text-xs font-bold text-[#D8E94B] group-hover:underline flex items-center gap-1" href="solutions.html?pillar=hr">
                   <span>Pelajari Solusi</span>
                   <span class="material-symbols-outlined text-[14px]">arrow_forward</span>
                 </a>
@@ -344,104 +336,14 @@
           </div>
         </div>
 
-        <!-- Card 4: Nara Academy (Human Capital) -->
+        <!-- Card 4: Corporate Legal Compliance -->
         <div class="interactive-card group relative h-[380px] rounded-3xl overflow-hidden shadow-lg border border-neutral-200/80 bg-[#0B0D0C]">
-          <img alt="Nara Academy & Human Capital" class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105 opacity-65" src="assets/images/portrait-female.png"/>
+          <img alt="Corporate Legal Compliance" class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105 opacity-65" src="assets/images/portrait-female.png"/>
           <div class="absolute inset-0 bg-gradient-to-t from-[#0B0D0C] via-[#0B0D0C]/40 to-transparent"></div>
           <div class="absolute inset-0 p-6 flex flex-col justify-between">
             <div class="flex items-center justify-between">
               <span class="px-3 py-1 rounded-full text-[10px] font-extrabold uppercase tracking-wider bg-[#0B0D0C]/80 text-[#D8E94B] border border-white/10 backdrop-blur-md">
-                PILAR 04
-              </span>
-              <div class="w-8 h-8 rounded-full bg-white/10 backdrop-blur-md flex items-center justify-center text-white">
-                <span class="material-symbols-outlined text-[18px]">school</span>
-              </div>
-            </div>
-            <div class="space-y-2">
-              <h3 class="text-xl font-bold text-white tracking-tight leading-snug">
-                Nara Academy &amp; Human Capital
-              </h3>
-              <p class="text-xs text-white/75 line-clamp-2 leading-relaxed">
-                Corporate academy, asesmen kompetensi talenta, kepemimpinan eksekutif, dan sertifikasi BNSP resmi.
-              </p>
-              <div class="pt-2 flex items-center justify-between">
-                <a class="text-xs font-bold text-[#D8E94B] group-hover:underline flex items-center gap-1" href="solutions.html?pillar=people">
-                  <span>Pelajari Solusi</span>
-                  <span class="material-symbols-outlined text-[14px]">arrow_forward</span>
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Card 5: IT Governance & Cyber Security -->
-        <div class="interactive-card group relative h-[380px] rounded-3xl overflow-hidden shadow-lg border border-neutral-200/80 bg-[#0B0D0C]">
-          <img alt="IT Governance & Siber Security" class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105 opacity-65" src="assets/images/server-room.png"/>
-          <div class="absolute inset-0 bg-gradient-to-t from-[#0B0D0C] via-[#0B0D0C]/40 to-transparent"></div>
-          <div class="absolute inset-0 p-6 flex flex-col justify-between">
-            <div class="flex items-center justify-between">
-              <span class="px-3 py-1 rounded-full text-[10px] font-extrabold uppercase tracking-wider bg-[#0B0D0C]/80 text-[#D8E94B] border border-white/10 backdrop-blur-md">
-                PILAR 05
-              </span>
-              <div class="w-8 h-8 rounded-full bg-white/10 backdrop-blur-md flex items-center justify-center text-white">
-                <span class="material-symbols-outlined text-[18px]">security</span>
-              </div>
-            </div>
-            <div class="space-y-2">
-              <h3 class="text-xl font-bold text-white tracking-tight leading-snug">
-                IT Governance &amp; Keamanan Siber
-              </h3>
-              <p class="text-xs text-white/75 line-clamp-2 leading-relaxed">
-                IT Master Plan, audit ISO 27001, pelindungan data pribadi (UU PDP), dan tata kelola adopsi AI.
-              </p>
-              <div class="pt-2 flex items-center justify-between">
-                <a class="text-xs font-bold text-[#D8E94B] group-hover:underline flex items-center gap-1" href="solutions.html?pillar=tech">
-                  <span>Pelajari Solusi</span>
-                  <span class="material-symbols-outlined text-[14px]">arrow_forward</span>
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Card 6: Standarisasi Mutu & ISO Audit -->
-        <div class="interactive-card group relative h-[380px] rounded-3xl overflow-hidden shadow-lg border border-neutral-200/80 bg-[#0B0D0C]">
-          <img alt="Standarisasi Mutu & Audit ISO" class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105 opacity-65" src="assets/images/green-building.png"/>
-          <div class="absolute inset-0 bg-gradient-to-t from-[#0B0D0C] via-[#0B0D0C]/40 to-transparent"></div>
-          <div class="absolute inset-0 p-6 flex flex-col justify-between">
-            <div class="flex items-center justify-between">
-              <span class="px-3 py-1 rounded-full text-[10px] font-extrabold uppercase tracking-wider bg-[#0B0D0C]/80 text-[#D8E94B] border border-white/10 backdrop-blur-md">
-                PILAR 06
-              </span>
-              <div class="w-8 h-8 rounded-full bg-white/10 backdrop-blur-md flex items-center justify-center text-white">
-                <span class="material-symbols-outlined text-[18px]">verified</span>
-              </div>
-            </div>
-            <div class="space-y-2">
-              <h3 class="text-xl font-bold text-white tracking-tight leading-snug">
-                Standarisasi Mutu &amp; Audit ISO
-              </h3>
-              <p class="text-xs text-white/75 line-clamp-2 leading-relaxed">
-                Sistem manajemen terpadu ISO 9001, ISO 14001, ISO 22000, serta persiapan sertifikasi akreditasi KAN.
-              </p>
-              <div class="pt-2 flex items-center justify-between">
-                <a class="text-xs font-bold text-[#D8E94B] group-hover:underline flex items-center gap-1" href="solutions.html?pillar=iso">
-                  <span>Pelajari Solusi</span>
-                  <span class="material-symbols-outlined text-[14px]">arrow_forward</span>
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Card 7: Legal Consulting & Corporate Compliance -->
-        <div class="interactive-card group relative h-[380px] rounded-3xl overflow-hidden shadow-lg border border-neutral-200/80 bg-[#0B0D0C]">
-          <img alt="Konsultasi Hukum & Legalitas Bisnis" class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105 opacity-65" src="assets/images/futuristic-tower.png"/>
-          <div class="absolute inset-0 bg-gradient-to-t from-[#0B0D0C] via-[#0B0D0C]/40 to-transparent"></div>
-          <div class="absolute inset-0 p-6 flex flex-col justify-between">
-            <div class="flex items-center justify-between">
-              <span class="px-3 py-1 rounded-full text-[10px] font-extrabold uppercase tracking-wider bg-[#0B0D0C]/80 text-[#D8E94B] border border-white/10 backdrop-blur-md">
-                PILAR 07
+                PILAR LAW (PROTECTION)
               </span>
               <div class="w-8 h-8 rounded-full bg-white/10 backdrop-blur-md flex items-center justify-center text-white">
                 <span class="material-symbols-outlined text-[18px]">gavel</span>
@@ -449,13 +351,13 @@
             </div>
             <div class="space-y-2">
               <h3 class="text-xl font-bold text-white tracking-tight leading-snug">
-                Konsultasi Hukum &amp; Legalitas Bisnis
+                Corporate Legal Compliance
               </h3>
-              <p class="text-xs text-white/75 line-clamp-2 leading-relaxed">
-                Legal audit komprehensif, drafting kontrak kemitraan strategis, penataan lisensi B2B, dan mitigasi dispute.
+              <p class="text-xs text-white/75 line-clamp-3 leading-relaxed">
+                Memastikan bisnis Anda berjalan di atas fondasi hukum yang kokoh. Audit legal dan kepatuhan regulasi yang komprehensif (Protects the Business).
               </p>
               <div class="pt-2 flex items-center justify-between">
-                <a class="text-xs font-bold text-[#D8E94B] group-hover:underline flex items-center gap-1" href="solutions.html?pillar=legal">
+                <a class="text-xs font-bold text-[#D8E94B] group-hover:underline flex items-center gap-1" href="solutions.html?pillar=law">
                   <span>Pelajari Solusi</span>
                   <span class="material-symbols-outlined text-[14px]">arrow_forward</span>
                 </a>
@@ -464,28 +366,28 @@
           </div>
         </div>
 
-        <!-- Card 8: Supply Chain & Operational Efficiency -->
+        <!-- Card 5: Business Dispute Mitigation -->
         <div class="interactive-card group relative h-[380px] rounded-3xl overflow-hidden shadow-lg border border-neutral-200/80 bg-[#0B0D0C]">
-          <img alt="Supply Chain & Efisiensi Operasional" class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105 opacity-65" src="assets/images/factory.png"/>
+          <img alt="Business Dispute Mitigation" class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105 opacity-65" src="assets/images/server-room.png"/>
           <div class="absolute inset-0 bg-gradient-to-t from-[#0B0D0C] via-[#0B0D0C]/40 to-transparent"></div>
           <div class="absolute inset-0 p-6 flex flex-col justify-between">
             <div class="flex items-center justify-between">
               <span class="px-3 py-1 rounded-full text-[10px] font-extrabold uppercase tracking-wider bg-[#0B0D0C]/80 text-[#D8E94B] border border-white/10 backdrop-blur-md">
-                PILAR 08
+                PILAR LAW (PROTECTION)
               </span>
               <div class="w-8 h-8 rounded-full bg-white/10 backdrop-blur-md flex items-center justify-center text-white">
-                <span class="material-symbols-outlined text-[18px]">inventory_2</span>
+                <span class="material-symbols-outlined text-[18px]">shield</span>
               </div>
             </div>
             <div class="space-y-2">
               <h3 class="text-xl font-bold text-white tracking-tight leading-snug">
-                Supply Chain &amp; Efisiensi Operasional
+                Business Dispute Mitigation
               </h3>
-              <p class="text-xs text-white/75 line-clamp-2 leading-relaxed">
-                Optimasi rantai pasok manufaktur, lean logistics, audit pengadaan (procurement), dan penurunan waste.
+              <p class="text-xs text-white/75 line-clamp-3 leading-relaxed">
+                Strategi mitigasi risiko litigasi dan penyelesaian sengketa B2B yang melindungi aset dan reputasi perusahaan secara optimal.
               </p>
               <div class="pt-2 flex items-center justify-between">
-                <a class="text-xs font-bold text-[#D8E94B] group-hover:underline flex items-center gap-1" href="solutions.html?pillar=scm">
+                <a class="text-xs font-bold text-[#D8E94B] group-hover:underline flex items-center gap-1" href="solutions.html?pillar=law">
                   <span>Pelajari Solusi</span>
                   <span class="material-symbols-outlined text-[14px]">arrow_forward</span>
                 </a>
@@ -494,28 +396,118 @@
           </div>
         </div>
 
-        <!-- Card 9: Corporate Innovation & Org Diagnostics -->
+        <!-- Card 6: Employment & Industrial Relations -->
         <div class="interactive-card group relative h-[380px] rounded-3xl overflow-hidden shadow-lg border border-neutral-200/80 bg-[#0B0D0C]">
-          <img alt="Inovasi Korporat & Riset Diagnostik" class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105 opacity-65" src="assets/images/boardroom.png"/>
+          <img alt="Employment & Industrial Relations" class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105 opacity-65" src="assets/images/green-building.png"/>
           <div class="absolute inset-0 bg-gradient-to-t from-[#0B0D0C] via-[#0B0D0C]/40 to-transparent"></div>
           <div class="absolute inset-0 p-6 flex flex-col justify-between">
             <div class="flex items-center justify-between">
               <span class="px-3 py-1 rounded-full text-[10px] font-extrabold uppercase tracking-wider bg-[#0B0D0C]/80 text-[#D8E94B] border border-white/10 backdrop-blur-md">
-                PILAR 09
+                PILAR LAW (PROTECTION)
               </span>
               <div class="w-8 h-8 rounded-full bg-white/10 backdrop-blur-md flex items-center justify-center text-white">
-                <span class="material-symbols-outlined text-[18px]">lightbulb</span>
+                <span class="material-symbols-outlined text-[18px]">handshake</span>
               </div>
             </div>
             <div class="space-y-2">
               <h3 class="text-xl font-bold text-white tracking-tight leading-snug">
-                Inovasi Korporat &amp; Riset Diagnostik
+                Employment &amp; Industrial Relations
               </h3>
-              <p class="text-xs text-white/75 line-clamp-2 leading-relaxed">
-                Pengukuran kesehatan organisasi (OHI), design thinking korporat, riset benchmarking industri, dan audit budaya.
+              <p class="text-xs text-white/75 line-clamp-3 leading-relaxed">
+                Advokasi hukum ketenagakerjaan, penyusunan Peraturan Perusahaan (PP), dan harmonisasi hubungan industrial yang kondusif.
               </p>
               <div class="pt-2 flex items-center justify-between">
-                <a class="text-xs font-bold text-[#D8E94B] group-hover:underline flex items-center gap-1" href="solutions.html?pillar=innovation">
+                <a class="text-xs font-bold text-[#D8E94B] group-hover:underline flex items-center gap-1" href="solutions.html?pillar=law">
+                  <span>Pelajari Solusi</span>
+                  <span class="material-symbols-outlined text-[14px]">arrow_forward</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 7: HRIS & Digital Transformation -->
+        <div class="interactive-card group relative h-[380px] rounded-3xl overflow-hidden shadow-lg border border-neutral-200/80 bg-[#0B0D0C]">
+          <img alt="HRIS & Digital Transformation" class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105 opacity-65" src="assets/images/futuristic-tower.png"/>
+          <div class="absolute inset-0 bg-gradient-to-t from-[#0B0D0C] via-[#0B0D0C]/40 to-transparent"></div>
+          <div class="absolute inset-0 p-6 flex flex-col justify-between">
+            <div class="flex items-center justify-between">
+              <span class="px-3 py-1 rounded-full text-[10px] font-extrabold uppercase tracking-wider bg-[#0B0D0C]/80 text-[#D8E94B] border border-white/10 backdrop-blur-md">
+                PILAR IT (TECHNOLOGY)
+              </span>
+              <div class="w-8 h-8 rounded-full bg-white/10 backdrop-blur-md flex items-center justify-center text-white">
+                <span class="material-symbols-outlined text-[18px]">memory</span>
+              </div>
+            </div>
+            <div class="space-y-2">
+              <h3 class="text-xl font-bold text-white tracking-tight leading-snug">
+                HRIS &amp; Digital Transformation
+              </h3>
+              <p class="text-xs text-white/75 line-clamp-3 leading-relaxed">
+                Digitalisasi sistem pengelolaan SDM Anda. Implementasi teknologi dan otomatisasi yang mempercepat proses bisnis (Accelerates the Business).
+              </p>
+              <div class="pt-2 flex items-center justify-between">
+                <a class="text-xs font-bold text-[#D8E94B] group-hover:underline flex items-center gap-1" href="solutions.html?pillar=it">
+                  <span>Pelajari Solusi</span>
+                  <span class="material-symbols-outlined text-[14px]">arrow_forward</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 8: AI Enablement for Business -->
+        <div class="interactive-card group relative h-[380px] rounded-3xl overflow-hidden shadow-lg border border-neutral-200/80 bg-[#0B0D0C]">
+          <img alt="AI Enablement for Business" class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105 opacity-65" src="assets/images/factory.png"/>
+          <div class="absolute inset-0 bg-gradient-to-t from-[#0B0D0C] via-[#0B0D0C]/40 to-transparent"></div>
+          <div class="absolute inset-0 p-6 flex flex-col justify-between">
+            <div class="flex items-center justify-between">
+              <span class="px-3 py-1 rounded-full text-[10px] font-extrabold uppercase tracking-wider bg-[#0B0D0C]/80 text-[#D8E94B] border border-white/10 backdrop-blur-md">
+                PILAR IT (TECHNOLOGY)
+              </span>
+              <div class="w-8 h-8 rounded-full bg-white/10 backdrop-blur-md flex items-center justify-center text-white">
+                <span class="material-symbols-outlined text-[18px]">speed</span>
+              </div>
+            </div>
+            <div class="space-y-2">
+              <h3 class="text-xl font-bold text-white tracking-tight leading-snug">
+                AI Enablement for Business
+              </h3>
+              <p class="text-xs text-white/75 line-clamp-3 leading-relaxed">
+                Integrasi Artificial Intelligence (AI) ke dalam operasional sehari-hari untuk mendongkrak efisiensi dan inovasi organisasi.
+              </p>
+              <div class="pt-2 flex items-center justify-between">
+                <a class="text-xs font-bold text-[#D8E94B] group-hover:underline flex items-center gap-1" href="solutions.html?pillar=it">
+                  <span>Pelajari Solusi</span>
+                  <span class="material-symbols-outlined text-[14px]">arrow_forward</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 9: Data Privacy & IT Security -->
+        <div class="interactive-card group relative h-[380px] rounded-3xl overflow-hidden shadow-lg border border-neutral-200/80 bg-[#0B0D0C]">
+          <img alt="Data Privacy & IT Security" class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105 opacity-65" src="assets/images/boardroom.png"/>
+          <div class="absolute inset-0 bg-gradient-to-t from-[#0B0D0C] via-[#0B0D0C]/40 to-transparent"></div>
+          <div class="absolute inset-0 p-6 flex flex-col justify-between">
+            <div class="flex items-center justify-between">
+              <span class="px-3 py-1 rounded-full text-[10px] font-extrabold uppercase tracking-wider bg-[#0B0D0C]/80 text-[#D8E94B] border border-white/10 backdrop-blur-md">
+                PILAR IT (TECHNOLOGY)
+              </span>
+              <div class="w-8 h-8 rounded-full bg-white/10 backdrop-blur-md flex items-center justify-center text-white">
+                <span class="material-symbols-outlined text-[18px]">security</span>
+              </div>
+            </div>
+            <div class="space-y-2">
+              <h3 class="text-xl font-bold text-white tracking-tight leading-snug">
+                Data Privacy &amp; IT Security
+              </h3>
+              <p class="text-xs text-white/75 line-clamp-3 leading-relaxed">
+                Perlindungan aset digital perusahaan dan kepatuhan UU Pelindungan Data Pribadi (UU PDP) untuk menjaga kredibilitas bisnis Anda.
+              </p>
+              <div class="pt-2 flex items-center justify-between">
+                <a class="text-xs font-bold text-[#D8E94B] group-hover:underline flex items-center gap-1" href="solutions.html?pillar=it">
                   <span>Pelajari Solusi</span>
                   <span class="material-symbols-outlined text-[14px]">arrow_forward</span>
                 </a>
@@ -544,10 +536,10 @@
             <span>KERANGKA KERJA OPERASIONAL NARA</span>
           </div>
           <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-white">
-            6 Pilar Utama Tata Kelola &amp; Eksekusi
+            NARA People Health System™
           </h2>
           <p class="text-sm sm:text-base text-white/70 leading-relaxed font-normal">
-            Pedoman filosofis dan standar metodologi operasional yang menjiwai setiap penugasan konsultasi, riset, dan pelatihan di Nara Institute.
+            Metodologi komprehensif "Corporate People Doctor" kami untuk mengawal pertumbuhan organisasi Anda dari fase diagnosis hingga akselerasi eksekusi.
           </p>
         </div>
 
@@ -561,11 +553,11 @@
               <div class="flex items-center gap-4">
                 <span class="font-extrabold text-sm opacity-60">01</span>
                 <div class="flex flex-col">
-                  <span class="font-bold text-sm sm:text-base tracking-tight">Spirit &amp; Integrity</span>
-                  <span class="text-[11px] text-white/70">Nilai Moral &amp; Etika Kepemimpinan</span>
+                  <span class="font-bold text-sm sm:text-base tracking-tight">Diagnosis &amp; Assessment</span>
+                  <span class="text-[11px] text-white/70">NARA People Health Check™</span>
                 </div>
               </div>
-              <span class="material-symbols-outlined pillar-icon text-[#D8E94B] text-[22px] group-hover:translate-x-1 transition-transform">favorite</span>
+              <span class="material-symbols-outlined pillar-icon text-[#D8E94B] text-[22px] group-hover:translate-x-1 transition-transform">health_and_safety</span>
             </button>
 
             <!-- Tab 02 -->
@@ -573,11 +565,11 @@
               <div class="flex items-center gap-4">
                 <span class="font-extrabold text-sm opacity-60">02</span>
                 <div class="flex flex-col">
-                  <span class="font-bold text-sm sm:text-base tracking-tight text-white">Structure &amp; Governance</span>
-                  <span class="text-[11px] text-white/50">Arsitektur GRC &amp; Model Bisnis</span>
+                  <span class="font-bold text-sm sm:text-base tracking-tight text-white">Talent Treatment</span>
+                  <span class="text-[11px] text-white/50">NARA People Care™</span>
                 </div>
               </div>
-              <span class="material-symbols-outlined pillar-icon text-white/40 text-[22px] group-hover:translate-x-1 transition-transform">account_tree</span>
+              <span class="material-symbols-outlined pillar-icon text-white/40 text-[22px] group-hover:translate-x-1 transition-transform">volunteer_activism</span>
             </button>
 
             <!-- Tab 03 -->
@@ -585,11 +577,11 @@
               <div class="flex items-center gap-4">
                 <span class="font-extrabold text-sm opacity-60">03</span>
                 <div class="flex flex-col">
-                  <span class="font-bold text-sm sm:text-base tracking-tight text-white">Strategy &amp; Market Leadership</span>
-                  <span class="text-[11px] text-white/50">Arah Masa Depan &amp; RJPP Korporat</span>
+                  <span class="font-bold text-sm sm:text-base tracking-tight text-white">Professional Development</span>
+                  <span class="text-[11px] text-white/50">Run the Business (HR)</span>
                 </div>
               </div>
-              <span class="material-symbols-outlined pillar-icon text-white/40 text-[22px] group-hover:translate-x-1 transition-transform">chess</span>
+              <span class="material-symbols-outlined pillar-icon text-white/40 text-[22px] group-hover:translate-x-1 transition-transform">model_training</span>
             </button>
 
             <!-- Tab 04 -->
@@ -597,11 +589,11 @@
               <div class="flex items-center gap-4">
                 <span class="font-extrabold text-sm opacity-60">04</span>
                 <div class="flex flex-col">
-                  <span class="font-bold text-sm sm:text-base tracking-tight text-white">Process &amp; Operational Excellence</span>
-                  <span class="text-[11px] text-white/50">Audit Mutu ISO, QHSE &amp; Lean</span>
+                  <span class="font-bold text-sm sm:text-base tracking-tight text-white">Corporate Compliance</span>
+                  <span class="text-[11px] text-white/50">Protects the Business (LAW)</span>
                 </div>
               </div>
-              <span class="material-symbols-outlined pillar-icon text-white/40 text-[22px] group-hover:translate-x-1 transition-transform">settings_suggest</span>
+              <span class="material-symbols-outlined pillar-icon text-white/40 text-[22px] group-hover:translate-x-1 transition-transform">gavel</span>
             </button>
 
             <!-- Tab 05 -->
@@ -609,11 +601,11 @@
               <div class="flex items-center gap-4">
                 <span class="font-extrabold text-sm opacity-60">05</span>
                 <div class="flex flex-col">
-                  <span class="font-bold text-sm sm:text-base tracking-tight text-white">People &amp; Human Capital</span>
-                  <span class="text-[11px] text-white/50">Nara Academy, Asesmen &amp; Sertifikasi</span>
+                  <span class="font-bold text-sm sm:text-base tracking-tight text-white">Legal Protection</span>
+                  <span class="text-[11px] text-white/50">Mitigasi Risiko Hukum</span>
                 </div>
               </div>
-              <span class="material-symbols-outlined pillar-icon text-white/40 text-[22px] group-hover:translate-x-1 transition-transform">groups</span>
+              <span class="material-symbols-outlined pillar-icon text-white/40 text-[22px] group-hover:translate-x-1 transition-transform">shield</span>
             </button>
 
             <!-- Tab 06 -->
@@ -621,8 +613,8 @@
               <div class="flex items-center gap-4">
                 <span class="font-extrabold text-sm opacity-60">06</span>
                 <div class="flex flex-col">
-                  <span class="font-bold text-sm sm:text-base tracking-tight text-white">Technology &amp; AI Enablement</span>
-                  <span class="text-[11px] text-white/50">Keamanan Siber &amp; Adopsi AI Bisnis</span>
+                  <span class="font-bold text-sm sm:text-base tracking-tight text-white">IT &amp; Digital Acceleration</span>
+                  <span class="text-[11px] text-white/50">Accelerates the Business (IT)</span>
                 </div>
               </div>
               <span class="material-symbols-outlined pillar-icon text-white/40 text-[22px] group-hover:translate-x-1 transition-transform">memory</span>
@@ -638,44 +630,44 @@
                 <div class="flex items-center justify-between pb-4 border-b border-white/10">
                   <div class="flex items-center gap-3">
                     <span id="display-pillar-num" class="w-8 h-8 rounded-full bg-[#9E1B22] text-white font-extrabold text-xs flex items-center justify-center">01</span>
-                    <span id="display-pillar-tag" class="text-xs uppercase font-extrabold tracking-widest text-[#D8E94B]">Nilai Inti Nara</span>
+                    <span id="display-pillar-tag" class="text-xs uppercase font-extrabold tracking-widest text-[#D8E94B]">People Health Check</span>
                   </div>
-                  <span id="display-pillar-principles" class="px-3 py-1 rounded-full text-[11px] font-bold bg-white/10 text-white/80 border border-white/10">5 Prinsip Utama</span>
+                  <span id="display-pillar-principles" class="px-3 py-1 rounded-full text-[11px] font-bold bg-white/10 text-white/80 border border-white/10">Fase 1</span>
                 </div>
 
                 <!-- Main Content -->
                 <div class="space-y-2">
                   <h3 id="display-pillar-title" class="text-2xl sm:text-3xl font-extrabold text-white tracking-tight">
-                    Spirit &amp; Leadership Integrity
+                    Diagnosis &amp; Assessment
                   </h3>
                   <p id="display-pillar-subtitle" class="text-xs sm:text-sm text-[#D8E94B] font-semibold">
-                    Komitmen Budaya, Nilai Moral &amp; Integritas Kepemimpinan
+                    NARA People Health Check™ Khusus CEO
                   </p>
                 </div>
 
                 <p id="display-pillar-desc" class="text-sm text-white/80 leading-relaxed font-normal">
-                  Fondasi paling esensial dalam seluruh layanan Nara Institute. Menanamkan nilai-nilai luhur kepemimpinan beretika, akuntabilitas moral, dan komitmen profesional yang kokoh bagi seluruh insan organisasi.
+                  Fase diagnosis mendalam layaknya "Medical Check-Up" untuk organisasi Anda. Kami menganalisis akar masalah, bottlenecks, dan gap performa SDM di perusahaan yang sedang tumbuh pesat.
                 </p>
 
                 <!-- Bullet Points -->
                 <div class="space-y-2 pt-2">
-                  <span class="text-xs uppercase font-bold text-white/50 tracking-wider">Prinsip Implementasi:</span>
+                  <span class="text-xs uppercase font-bold text-white/50 tracking-wider">Fokus Assessment:</span>
                   <ul id="display-pillar-bullets" class="space-y-2.5">
                     <li class="flex items-start gap-3 text-white/80 text-sm leading-relaxed">
                       <span class="material-symbols-outlined text-[#D8E94B] text-[18px] shrink-0 mt-0.5">check_circle</span>
-                      <span>Integritas tanpa kompromi dalam setiap audit dan rekomendasi</span>
+                      <span>Audit komprehensif struktur organisasi &amp; beban kerja</span>
                     </li>
                     <li class="flex items-start gap-3 text-white/80 text-sm leading-relaxed">
                       <span class="material-symbols-outlined text-[#D8E94B] text-[18px] shrink-0 mt-0.5">check_circle</span>
-                      <span>Kepemimpinan berbasis empati, resiliensi, dan visi jangka panjang</span>
+                      <span>Identifikasi gap kompetensi talenta vs strategi bisnis</span>
                     </li>
                     <li class="flex items-start gap-3 text-white/80 text-sm leading-relaxed">
                       <span class="material-symbols-outlined text-[#D8E94B] text-[18px] shrink-0 mt-0.5">check_circle</span>
-                      <span>Penyelarasan budaya kerja korporat dengan nilai-nilai kemanusiaan</span>
+                      <span>Evaluasi kesehatan budaya kerja &amp; tingkat retensi</span>
                     </li>
                     <li class="flex items-start gap-3 text-white/80 text-sm leading-relaxed">
                       <span class="material-symbols-outlined text-[#D8E94B] text-[18px] shrink-0 mt-0.5">check_circle</span>
-                      <span>Transparansi tata kelola yang memancarkan otoritas moral</span>
+                      <span>Rekomendasi "Prescription" strategis kepada Business Owner</span>
                     </li>
                   </ul>
                 </div>
@@ -685,7 +677,7 @@
               <div class="mt-8 pt-6 border-t border-white/10 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
                 <div class="flex flex-col">
                   <span class="text-[10px] text-white/50 uppercase tracking-wider font-semibold">Hasil Utama:</span>
-                  <span id="display-pillar-deliverables" class="text-xs text-white/90 font-medium">Executive Leadership Blueprint, Code of Conduct Transformation, Cultural Alignment Assessment</span>
+                  <span id="display-pillar-deliverables" class="text-xs text-white/90 font-medium">Organization Health Report, Talent Gap Analysis, Strategic Prescription Blueprint</span>
                 </div>
                 <a class="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-[#D8E94B] hover:bg-[#c9da3d] text-[#0B0D0C] text-xs font-bold tracking-tight transition-all shrink-0" href="contact.html">
                   <span>Konsultasikan Pilar Ini</span>
@@ -758,7 +750,7 @@
           </h2>
 
           <p class="text-white/85 text-base sm:text-lg font-normal leading-relaxed">
-            Konsultan senior kami siap mendiskusikan kebutuhan spesifik Anda—mulai dari audit tata kelola, evaluasi risiko, sertifikasi K3/ISO, hingga program pelatihan in-house yang dirancang khusus.
+            Konsultan senior kami siap mendiskusikan kebutuhan spesifik Anda—mulai dari audit organisasi (People Health Check), pengembangan kepemimpinan (HR), mitigasi risiko hukum (LAW), hingga akselerasi IT.
           </p>
 
           <div class="pt-4 flex flex-wrap items-center gap-4">
@@ -798,7 +790,7 @@
           </div>
         </div>
         <p class="text-xs text-white/60 leading-relaxed max-w-sm">
-          Lembaga rujukan nasional dalam konsultasi strategi bisnis, tata kelola risiko GRC, sertifikasi sistem manajemen mutu/K3, dan pengembangan human capital berdaya saing global.
+          Corporate People Doctor yang menjadi rujukan nasional dalam diagnosis organisasi (People Health System™), pendampingan SDM (HR), perlindungan hukum bisnis (LAW), dan akselerasi teknologi (IT).
         </p>
         <div class="flex items-center gap-3 text-white/50 pt-2">
           <a class="w-8 h-8 rounded-full bg-white/5 hover:bg-white/15 flex items-center justify-center text-white transition-colors" href="https://linkedin.com" target="_blank" aria-label="LinkedIn">
